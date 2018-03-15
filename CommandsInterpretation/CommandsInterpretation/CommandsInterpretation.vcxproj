@@ -118,6 +118,7 @@
   <ItemGroup>
     <ClInclude Include="BattleCommand.h" />
     <ClInclude Include="BattleCommandException.h" />
+    <ClInclude Include="BattleCommandInvoker.h" />
     <ClInclude Include="BattleCommandInvokerException.h" />
     <ClInclude Include="BattleException.h" />
     <ClInclude Include="CommandBasedBattle.h" />
@@ -125,8 +126,10 @@
     <ClInclude Include="HandledException.h" />
     <ClInclude Include="IBattle.h" />
     <ClInclude Include="IBattleCommandInvoker.h" />
+    <ClInclude Include="IObject.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BattleCommandInvoker.cpp" />
     <ClCompile Include="CommandBasedBattle.cpp" />
     <ClCompile Include="HandledException.cpp" />
   </ItemGroup>
