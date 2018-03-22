@@ -1,12 +1,6 @@
 [submodule "FakeIt"]
 	path = FakeIt
 	url = https://github.com/eranpeer/FakeIt.git
-[submodule "Hypodermic"]
-	path = Hypodermic
-	url = https://github.com/ybainier/Hypodermic
 [submodule "CommandsInterpretation/FakeIt"]
 	path = CommandsInterpretation/FakeIt
 	url = https://github.com/eranpeer/FakeIt.git
-[submodule "CommandsInterpretation/Hypodermic"]
-	path = CommandsInterpretation/Hypodermic
-	url = https://github.com/ybainier/Hypodermic
