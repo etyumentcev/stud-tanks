@@ -1,4 +1,4 @@
-#ifndef _COMMAnD_BASED_BATTLE_H_
+#ifndef _COMMAND_BASED_BATTLE_H_
 #define _COMMAND_BASED_BATTLE_H_
 
 #include "IBattle.h"

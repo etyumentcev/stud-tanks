@@ -5,63 +5,63 @@
 #include "CppUnitTest.h"
 
 #include "../CommandsInterpretation/CommandBasedBattle.h"
-#include "../CommandsInterpretation/BattleCommandInvoker.h"
-
+#include "../CommandsInterpretation/IBattleCommandInvoker.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace CommandsInterpretationTests
-{		
+namespace sandboxTests
+{
 	TEST_CLASS(CommandBasedBattleTests)
 	{
 	public:
-		
+
 		TEST_METHOD(CommandBasedBattleShouldCallTheCommand)
 		{
-			size_t numberOfCalls = 0;
 			bool wasCalled = false;
+			BattleCommand command = [&wasCalled]() {wasCalled = true; };
 
-			BattleCommand command = [&wasCalled, &numberOfCalls]() { wasCalled = true; ++numberOfCalls; };
+			fakeit::Mock<IBattleCommandInvoker> mock;
+			fakeit::When(Method(mock, invoke)).Return(command);
 
-			IBattleCommandInvoker* invoker = new BattleCommandInvoker(command);
-			IBattle* battle = new CommandBasedBattle(*invoker);
+			CommandBasedBattle battle(mock.get());
 
-			battle->process();
+			battle.process();
 
+			fakeit::Verify(Method(mock, invoke)).Once();
 			Assert::IsTrue(wasCalled);
-			Assert::AreEqual<size_t>(1, numberOfCalls);
 		}
+
 		TEST_METHOD(CommandBasedBattleShouldThrowBattleExceptionIfBattleCommandInvokerThrowsException)
 		{
-			size_t numberOfCalls = 0;
-			
-			BattleCommand command = [&numberOfCalls]() { ++numberOfCalls; throw BattleCommandInvokerException(); };
+			fakeit::Mock<IBattleCommandInvoker> mock;
+			fakeit::When(Method(mock, invoke)).Throw(BattleCommandInvokerException());
 
-			IBattleCommandInvoker* invoker = new BattleCommandInvoker(command);
-			IBattle* battle = new CommandBasedBattle(*invoker);
+			CommandBasedBattle battle(mock.get());
 
-			Assert::ExpectException<BattleException>([&battle]() { battle->process(); });
-			Assert::AreEqual<size_t>(1, numberOfCalls);
+			Assert::ExpectException<BattleException>([&battle]() { battle.process(); });
+
+			fakeit::Verify(Method(mock, invoke)).Once();
 		}
+
 		TEST_METHOD(CommandBasedBattleShouldThrowBattleExceptionIfBattleCommandThrowsException)
 		{
-			size_t numberOfCalls = 0;
 			bool wasCalled = false;
-
-			BattleCommand command = [&wasCalled, &numberOfCalls]()
+			BattleCommand command = [&wasCalled]()
 			{
-				++numberOfCalls;
 				wasCalled = true;
 				throw BattleCommandException();
 			};
 
-			
-			IBattleCommandInvoker* invoker = new BattleCommandInvoker(command);
-			IBattle* battle = new CommandBasedBattle(*invoker);
-			
-			Assert::ExpectException<BattleException>([&battle]() {battle->process(); });
+			fakeit::Mock<IBattleCommandInvoker> mock;
+			fakeit::When(Method(mock, invoke)).Return(command);
+
+			CommandBasedBattle battle(mock.get());
+
+			Assert::ExpectException<BattleException>([&battle]() {battle.process(); });
+
+			fakeit::Verify(Method(mock, invoke)).Once();
 			Assert::IsTrue(wasCalled);
-			Assert::AreEqual<size_t>(1, numberOfCalls);
 		}
+
 	};
 }

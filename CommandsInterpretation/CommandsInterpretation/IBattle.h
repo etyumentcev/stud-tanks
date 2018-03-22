@@ -6,7 +6,7 @@
 class IBattle
 {
 public:
-	virtual void process() = 0;
+	virtual void process() throw(BattleException) = 0;
 };
 
 #endif
