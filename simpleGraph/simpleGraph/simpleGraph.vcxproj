@@ -112,12 +112,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DrawFirstCommandTank.cpp" />
     <ClCompile Include="FieldSetting.cpp" />
-    <ClCompile Include="MatrixField.cpp" />
+    <ClCompile Include="GameFieldWithObj.cpp" />
     <ClCompile Include="MyExceptions.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MatrixField.h" />
+    <ClInclude Include="DrawFirstCommandTank.h" />
+    <ClInclude Include="DrawSecondCommandTank.h" />
+    <ClInclude Include="Figure.h" />
     <ClInclude Include="MyExceptions.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
