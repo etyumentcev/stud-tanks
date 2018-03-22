@@ -1,6 +1,3 @@
-[submodule "FakeIt"]
-	path = FakeIt
-	url = https://github.com/eranpeer/FakeIt.git
 [submodule "CommandsInterpretation/FakeIt"]
 	path = CommandsInterpretation/FakeIt
 	url = https://github.com/eranpeer/FakeIt.git

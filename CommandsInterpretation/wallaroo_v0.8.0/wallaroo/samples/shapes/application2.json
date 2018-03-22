@@ -1,0 +1,36 @@
+{
+
+  "wallaroo":
+  {
+
+    "parts":
+    [
+      {
+        "name": "draft",
+        "class": "Draft"
+      },
+
+      {
+        "name": "canvas",
+        "class": "CsvFileCanvas",
+        "attribute":
+          {
+            "name": "file_name",
+            "value": "result.csv"
+          }
+      }
+    ],
+    
+    "wiring":
+    [
+      {
+        "source": "draft",
+        "dest": "canvas",
+        "collaborator": "canvas"
+      }
+
+    ]
+
+  }
+
+}
