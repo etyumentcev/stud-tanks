@@ -27,6 +27,9 @@
     <ClCompile Include="DrawFirstCommandTank.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="DrawSecondCommandTank.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyExceptions.h">

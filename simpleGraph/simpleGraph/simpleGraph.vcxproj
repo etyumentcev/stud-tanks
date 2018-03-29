@@ -113,6 +113,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DrawFirstCommandTank.cpp" />
+    <ClCompile Include="DrawSecondCommandTank.cpp" />
     <ClCompile Include="FieldSetting.cpp" />
     <ClCompile Include="GameFieldWithObj.cpp" />
     <ClCompile Include="MyExceptions.cpp" />

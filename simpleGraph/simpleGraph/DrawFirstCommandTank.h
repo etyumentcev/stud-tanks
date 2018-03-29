@@ -2,110 +2,54 @@
 #define _DRAWFIRSTCOMMANDTANK_H_
 
 #include "Figure.h"
-#include <windows.h>
-#include <iostream>
-
-using namespace std;
-
-
 
 class DrawFirstCommandTank :public Figure
 {
-	HANDLE oh = GetStdHandle(STD_OUTPUT_HANDLE);
 	int x;
 	int y;
-	COORD coord;
+	int direction;
+	unsigned char spriteOfFirstCommandTank[4][7][7] = 
+	{
+		{ 
+			{218, 196, 196, 196, 196, 196, 191},
+			{179, 32, 32, 32, 32, 32, 179},
+			{179, 32, 218, 196, 191, 32, 179},
+			{179, 32, 179, 32, 179, 32, 179},
+			{179, 32, 192, 194, 217, 32, 179},
+			{179, 32, 32, 179 , 32, 32, 179},
+			{192, 196, 196, 196, 196, 196, 217}
+		},
+		{
+			{ 218, 196, 196, 196, 196, 196, 191 },
+			{ 179, 32, 32, 32, 32, 32, 179 },
+			{ 179, 32, 218, 196, 191, 32, 179 },
+			{ 179, 32, 179, 32, 195, 196, 179 },
+			{ 179, 32, 192, 196, 217, 32, 179 },
+			{ 179, 32, 32, 32 , 32, 32, 179 },
+			{ 192, 196, 196, 196, 196, 196, 217 }
+		},
+		{
+			{ 218, 196, 196, 196, 196, 196, 191 },
+			{ 179, 32, 32, 179, 32, 32, 179 },
+			{ 179, 32, 218, 193, 191, 32, 179 },
+			{ 179, 32, 179, 32, 179, 32, 179 },
+			{ 179, 32, 192, 196, 217, 32, 179 },
+			{ 179, 32, 32, 32, 32, 32, 179 },
+			{ 192, 196, 196, 196, 196, 196, 217 }
+		},
+		{
+			{ 218, 196, 196, 196, 196, 196, 191 },
+			{ 179, 32, 32, 32, 32, 32, 179 },
+			{ 179, 32, 218, 196, 191, 32, 179 },
+			{ 179, 196, 180, 32, 179, 32, 179 },
+			{ 179, 32, 192, 196, 217, 32, 179 },
+			{ 179, 32, 32, 32 , 32, 32, 179 },
+			{ 192, 196, 196, 196, 196, 196, 217 }
+		}
+	};
 	public:
-		DrawFirstCommandTank(int x1, int y1)
-		{
-			x = x1;
-			y = y1;
-		}
-		virtual void Draw()
-		{
-			coord.X = x - 1;
-			coord.Y = y - 1;
-			SetConsoleCursorPosition(oh, coord);
-			cout << (char)218;
-			cout << (char)196;
-			cout << (char)191;
-			coord.X = x - 1;
-			coord.Y = y;
-			SetConsoleCursorPosition(oh, coord);
-			cout << (char)179;
-			cout << " ";
-			cout << (char)179;
-			coord.X = x - 1;
-			coord.Y = y + 1;
-			SetConsoleCursorPosition(oh, coord);
-			cout << (char)192;
-			cout << (char)194;
-			cout << (char)217;
-			coord.X = x;
-			coord.Y = y + 2;
-			SetConsoleCursorPosition(oh, coord);
-			cout << (char)179;
-			coord.X = x - 3;
-			coord.Y = x - 3;
-			SetConsoleCursorPosition(oh, coord);
-			cout << (char)218;
-			cout << (char)196;
-			cout << (char)196;
-			cout << (char)196;
-			cout << (char)196;
-			cout << (char)196;
-			cout << (char)191;
-			coord.X = x - 3;
-			coord.Y = y - 2;
-			SetConsoleCursorPosition(oh, coord);
-			cout << (char)179;
-			coord.X = x + 3;
-			coord.Y = y - 2;
-			SetConsoleCursorPosition(oh, coord);
-			cout << (char)179;
-			coord.X = x - 3;
-			coord.Y = y - 1;
-			SetConsoleCursorPosition(oh, coord);
-			cout << (char)179;
-			coord.X = x + 3;
-			coord.Y = y - 1;
-			SetConsoleCursorPosition(oh, coord);
-			cout << (char)179;
-			coord.X = x - 3;
-			coord.Y = y;
-			SetConsoleCursorPosition(oh, coord);
-			cout << (char)179;
-			coord.X = x + 3;
-			coord.Y = y;
-			SetConsoleCursorPosition(oh, coord);
-			cout << (char)179;
-			coord.X = x - 3;
-			coord.Y = y + 1;
-			SetConsoleCursorPosition(oh, coord);
-			cout << (char)179;
-			coord.X = x + 3;
-			coord.Y = y + 1;
-			SetConsoleCursorPosition(oh, coord);
-			cout << (char)179;
-			coord.X = x - 3;
-			coord.Y = y + 2;
-			SetConsoleCursorPosition(oh, coord);
-			cout << (char)179;
-			coord.X = x + 3;
-			coord.Y = y + 2;
-			SetConsoleCursorPosition(oh, coord);
-			cout << (char)179;
-			coord.X = x - 3;
-			coord.Y = y + 3;
-			SetConsoleCursorPosition(oh, coord);
-			cout << (char)192;
-			cout << (char)196;
-			cout << (char)196;
-			cout << (char)196;
-			cout << (char)196;
-			cout << (char)196;
-			cout << (char)217;
-		}
+		DrawFirstCommandTank(int x1, int y1, int direction);
+		virtual void Draw();
 };
 
 #endif

@@ -8,8 +8,8 @@ using namespace std;
 
 int main() 
 {
-	Figure *tank = new DrawFirstCommandTank(5,5);
-	Figure *enemyTank = new DrawSecondCommandTank(15,15);
+	Figure *tank = new DrawFirstCommandTank(5, 5, 3);
+	Figure *enemyTank = new DrawSecondCommandTank(15, 15, 3);
 	HANDLE oh = GetStdHandle(STD_OUTPUT_HANDLE);
 	COORD maxWindow = GetLargestConsoleWindowSize(oh); // размер самого большого возможного консольного окна
 	SMALL_RECT srctWindow = { 0, 0, maxWindow.X - 1, maxWindow.Y - 1};
