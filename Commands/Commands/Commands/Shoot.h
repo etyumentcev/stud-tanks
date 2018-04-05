@@ -1,11 +1,15 @@
 #ifndef _SHOOT_H_
 #define _SHOOT_H_
 
-#include "Invoker.h"
+#include "Command.h"
 
-class Shoot : public Invoker
+class Shoot : public Command
 {
-	virtual void Invoke();
+	//ArrayObjects args;
+public:
+	Shoot(ArrayObjects _args) : Command(_args) {}
+	Shoot(Shoot const & other);
+	virtual void Action();
 };
 
 

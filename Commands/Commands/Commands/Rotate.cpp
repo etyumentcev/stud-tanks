@@ -1,6 +1,11 @@
 #include "Rotate.h"
 
-void Rotate::Invoke()
+Rotate::Rotate(Rotate const & other)
+{
+	/*реализация конструктора копии*/
+}
+
+void Rotate::Action()
 {
 
 }

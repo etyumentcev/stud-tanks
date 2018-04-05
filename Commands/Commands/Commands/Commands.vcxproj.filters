@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Invoker.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Move.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
@@ -28,6 +25,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Resolver.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

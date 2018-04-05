@@ -1,11 +1,15 @@
 #ifndef _MOVE_H_
 #define _MOVE_H_
 
-#include "Invoker.h"
+#include "Command.h"
 
-class Move: public Invoker
+class Move: public Command
 {
-	virtual void Invoke();
+	//ArrayObjects args;
+public:
+	Move(ArrayObjects _args) : Command(_args) {}
+	Move(Move const & other);
+	virtual void Action();
 };
 
 

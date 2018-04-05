@@ -1,11 +1,15 @@
 #ifndef _ROTATE_H_
 #define _ROTATE_H_
 
-#include "Invoker.h"
+#include "Command.h"
 
-class Rotate : public Invoker
+class Rotate : public Command
 {
-	virtual void Invoke();
+	//ArrayObjects args;
+public:
+	Rotate(ArrayObjects _args) : Command(_args) {}
+	Rotate(Rotate const & other);
+	virtual void Action();
 };
 
 

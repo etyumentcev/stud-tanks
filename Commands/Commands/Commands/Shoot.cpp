@@ -1,6 +1,11 @@
 #include "Shoot.h"
 
-void Shoot::Invoke()
+Shoot::Shoot(Shoot const & other)
+{
+	/*реализация конструктора копии*/
+}
+
+void Shoot::Action()
 {
 
 }

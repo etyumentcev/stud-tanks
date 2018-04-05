@@ -1,6 +1,11 @@
 #include "Move.h"
 
-void Move::Invoke()
+Move::Move(Move const & other)
+{
+	/*реализация конструктора копии*/
+}
+
+void Move::Action()
 {
 
 }

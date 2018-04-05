@@ -111,7 +111,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Invoker.h" />
+    <ClInclude Include="Command.h" />
     <ClInclude Include="Move.h" />
     <ClInclude Include="Resolver.h" />
     <ClInclude Include="Rotate.h" />

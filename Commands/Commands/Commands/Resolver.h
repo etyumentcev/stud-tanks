@@ -1,15 +1,21 @@
 #ifndef _RESOLVER_H_
 #define _RESOLVER_H_
 
-#include "Invoker.h"
-#include <unordered_map>
+#include "Command.h"
+#include "Move.h"
+#include "Rotate.h"
+#include "Shoot.h"
+#include <map>
 
-typedef std::unordered_map<Invoker*, String> HashMap;
+typedef std::map<String, Command*> HashMap;
 
 class Resolver
 {
-	void setNewElement(HashMap &comandMap);
-	Invoker* getElementByKey(HashMap &comandMap);
+	HashMap mapOfCommand;
+public:
+	Command * createCommand(ArrayObjects &args);
+	void addOneElement(String, Command*);
+	HashMap fillMapOfCommand();
 };
 
 
