@@ -5,10 +5,14 @@
 
 class Move: public Command
 {
-	//ArrayObjects args;
+	int x;
+	int y;
+	int vectorX;
+	int vectorY;
 public:
-	Move(ArrayObjects _args) : Command(_args) {}
-	Move(Move const & other);
+	Move(ArrayObjects args[1],ArrayObjects args[2],ArrayObjects args[3],ArrayObjects args[4]);
+	//Move(ArrayObjects _args) : Command(_args) {}
+	Move(Move const &other);
 	virtual void Action();
 };
 
