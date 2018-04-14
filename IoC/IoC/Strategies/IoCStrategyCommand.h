@@ -9,8 +9,8 @@ class IoCStrategyCommand :public IoCStrategy
 public:
 	IoCStrategyCommand();
 	virtual ~IoCStrategyCommand() noexcept;
-
 	virtual void* Create(ArrayObjects const& args);
+
 };
 
 #endif

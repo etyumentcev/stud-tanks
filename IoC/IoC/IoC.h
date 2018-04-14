@@ -4,35 +4,35 @@
 #include <map>
 #include <memory>
 
-#include "IoCStrategy.h"
+#include ".\Strategies\IoCStrategy.h"
 
 template<class T> class Key
 {
 public:
 	static std::string ToString()
 	{
-		return "not_existed_key";
+		return "Nonexisting key";
 	}
 };
 
 class IoC
 {
 
-	std::map<std::string, std::unique_ptr<IoCStrategy>> catalog;
+	std::map<std::string, Ptr<IoCStrategy>> catalog;
 
 	void* resolve(std::string const& key, ArrayObjects const& args);
 
 public:
 
-	template<class T> std::unique_ptr<T> Resolve(Key<T>, ArrayObjects const& args)
+	template<class T> std::Ptr<T> Resolve(Key<T>, ArrayObjects const& args)
 	{
 		void *result = resolve(Key<T>::Tostring());
-		retrun std::unique_ptr<T>(reinterpret_cast<T*>(result));
+		retrun Ptr<T>(reinterpret_cast<T*>(result));
 	}
 
-	template<class T> void Register(std::unique_ptr<IoCStrategy>  strategy)
+	void Register(Ptr<IoCStrategy>  strategy)
 	{
-		catalog[Key<T>::ToString()] = stategy;
+			catalog[Key<T>::ToString()] = stategy;
 	}
 
 	IoC();
