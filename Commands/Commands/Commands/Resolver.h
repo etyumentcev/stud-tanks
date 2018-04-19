@@ -13,7 +13,7 @@ class Resolver
 {
 	HashMap mapOfCommand;
 public:
-	Command * createCommand(ArrayObjects &args);
+	void createAndUseCommand(ArrayObjects &args);
 	void addOneElement(String, Command*);
 	HashMap fillMapOfCommand();
 };

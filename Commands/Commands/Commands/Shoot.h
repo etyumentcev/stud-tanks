@@ -2,14 +2,14 @@
 #define _SHOOT_H_
 
 #include "Command.h"
+#include <map>
+
+typedef std::map <String, String> HashMap;
 
 class Shoot : public Command
 {
-	//ArrayObjects args;
 public:
-	Shoot(ArrayObjects _args) : Command(_args) {}
-	Shoot(Shoot const & other);
-	virtual void Action();
+	virtual void Action(/*массив*/);
 };
 
 

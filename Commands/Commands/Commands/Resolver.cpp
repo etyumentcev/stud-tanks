@@ -5,11 +5,11 @@ void Resolver::addOneElement(String str, Command* obj)
 	mapOfCommand.insert( std::pair<String, Command*> (str, obj));
 }
 
-Command * Resolver::createCommand(ArrayObjects &args)
+void Resolver::createAndUseCommand(ArrayObjects &args)
 {
 	Command *command = mapOfCommand[args[0]];
-	return command;
-	//return 	mapOfCommand[args[0]](args);
+	command->Action(/*массив*/);
+	delete command;
 }
 
 HashMap Resolver::fillMapOfCommand()
