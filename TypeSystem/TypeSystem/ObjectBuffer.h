@@ -5,7 +5,6 @@
 #include "Pointer.h"
 
 #include <vector>
-#include <memory>
 #include <utility>
 
 using namespace std;
@@ -13,7 +12,7 @@ using namespace std;
 class ObjectBuffer
 {
 
-	vector<Pointer<Object>*> mBuffer;
+	vector<Pointer<Object>*> buffer_;
 
 public:
 
@@ -21,11 +20,11 @@ public:
 	ObjectBuffer(const ObjectBuffer& otherObjectBuffer);
 	ObjectBuffer(ObjectBuffer && otherObjectBuffer);
 
-	ObjectBuffer& operator=(const ObjectBuffer & objectBuffer);
-	ObjectBuffer& operator=(ObjectBuffer&& otherObjectBuffer) noexcept;
+	ObjectBuffer& operator=(const ObjectBuffer& objectBuffer);
+	ObjectBuffer& operator=(ObjectBuffer && otherObjectBuffer) noexcept;
 
 	Pointer<Object>* getPointerToObject(size_t index);
-	void addObject(const Pointer<Object>* newObject);
+	void addObject(Pointer<Object>* newObject);
 
 	virtual ~ObjectBuffer();
 

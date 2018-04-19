@@ -1,39 +1,40 @@
 #include "ObjectBuffer.h"
 
-ObjectBuffer::ObjectBuffer(vector<Pointer<Object>*> buffer) : mBuffer(move(buffer))
+ObjectBuffer::ObjectBuffer(vector<Pointer<Object>*> buffer) : buffer_(move(buffer))
 {
 
 }
 
-ObjectBuffer::ObjectBuffer(const ObjectBuffer & otherObjectBuffer) : mBuffer(otherObjectBuffer.mBuffer)
+ObjectBuffer::ObjectBuffer(const ObjectBuffer& otherObjectBuffer) : buffer_(otherObjectBuffer.buffer_)
 {
 
 }
 
-ObjectBuffer::ObjectBuffer(ObjectBuffer && otherObjectBuffer) : mBuffer(move(0))
+ObjectBuffer::ObjectBuffer(ObjectBuffer && otherObjectBuffer) : buffer_(move(0))
 {
-	swap(mBuffer, otherObjectBuffer.mBuffer);
+	swap(buffer_, otherObjectBuffer.buffer_);
 }
 
-ObjectBuffer & ObjectBuffer::operator=(const ObjectBuffer & otherObjectBuffer)
+ObjectBuffer& ObjectBuffer::operator=(const ObjectBuffer& otherObjectBuffer)
 {
-	mBuffer = otherObjectBuffer.mBuffer;
+	buffer_ = otherObjectBuffer.buffer_;
 	return *this;
 }
 
-ObjectBuffer & ObjectBuffer::operator=(ObjectBuffer && otherObjectBuffer) noexcept
+ObjectBuffer& ObjectBuffer::operator=(ObjectBuffer && otherObjectBuffer) noexcept
 {
-	swap(mBuffer, otherObjectBuffer.mBuffer);
+	swap(buffer_, otherObjectBuffer.buffer_);
 	return *this;
 }
 
 Pointer<Object>* ObjectBuffer::getPointerToObject(size_t index)
 {
-	return mBuffer.at(index);
+	return buffer_.at(index);
 }
 
-void ObjectBuffer::addObject(const Pointer<Object>* newObject)
+void ObjectBuffer::addObject(Pointer<Object>* newObject)
 {
+	buffer_.push_back(newObject);
 }
 
 ObjectBuffer::~ObjectBuffer()

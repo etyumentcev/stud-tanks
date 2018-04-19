@@ -1,21 +1,35 @@
-#ifndef SMART_POINTER_H
-#define SMART_POINTER_H
+#ifndef _SMART_POINTER_H_
+#define _SMART_POINTER_H_
 
 #include "Pointer.h"
 
 template <typename T>
 
-class SmartPointer : public Pointer<typename T>
+class SmartPointer : public Pointer<T>
 {
-	bool del_;
-	T* pointer_;
-public:
-	SmartPointer(T* pointer);
-	SmartPointer(SmartPointer <T> const& other);
 
-	T& operator* (SmartPointer <T> & other);
-	T getObject();
-	~SmartPointer();
+	//bool del_;
+	T* pointer_;
+
+public:
+
+	explicit SmartPointer(T* pointer) : pointer_(move(pointer)){};
+	/*SmartPointer(SmartPointer <T> const& other);
+	SmartPointer(SmartPointer <T> && otherSmartPointer);
+
+	SmartPointer& operator=(const SmartPointer <T> & smartPointer);
+	SmartPointer& operator=(SmartPointer <T> && otherSmartPointer) noexcept;
+	T& operator* (SmartPointer <T> & other);*/
+
+	T* getObject() {
+	return pointer_;
 };
+
+	virtual ~SmartPointer(){
+
+};
+
+};
+
 
 #endif

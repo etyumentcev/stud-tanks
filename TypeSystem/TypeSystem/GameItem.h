@@ -17,7 +17,6 @@ public:
 
 	unique_ptr<Object> getValue(const string& key);
 	void setValue(const string& key, unique_ptr<Object> newValue);
-
 	virtual ~GameItem();
 };
 

@@ -6,7 +6,9 @@ template <typename T>
 class Pointer
 {
 public:
-	virtual T* getObject() = 0;
+//	virtual get()=0;
+	virtual ~Pointer() = 0;
+
 };
 
 #endif

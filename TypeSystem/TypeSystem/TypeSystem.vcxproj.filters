@@ -13,34 +13,40 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы заголовков\Objects">
+      <UniqueIdentifier>{d7e66e45-9a7b-450c-9b79-5a0127788a98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Pointers">
+      <UniqueIdentifier>{8d70b9a2-0bf8-4c5c-82a1-23b0e35c93f4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameItem.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Object.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Objects</Filter>
     </ClInclude>
     <ClInclude Include="Array.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Objects</Filter>
     </ClInclude>
     <ClInclude Include="Bool.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Objects</Filter>
     </ClInclude>
     <ClInclude Include="Integer.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Objects</Filter>
     </ClInclude>
     <ClInclude Include="String.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="SmartPointer.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Objects</Filter>
     </ClInclude>
     <ClInclude Include="ObjectBuffer.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Pointers</Filter>
     </ClInclude>
     <ClInclude Include="Pointer.h">
-      <Filter>Файлы заголовков</Filter>
+      <Filter>Файлы заголовков\Pointers</Filter>
+    </ClInclude>
+    <ClInclude Include="SmartPointer.h">
+      <Filter>Файлы заголовков\Pointers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

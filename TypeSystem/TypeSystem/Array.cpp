@@ -1,5 +1,5 @@
 #include "Array.h"
-
+/*
 Array::Array(vector<Pointer<Object>*> array) : mArray(move(array))
 {
 
@@ -31,3 +31,4 @@ Array::~Array()
 {
 
 }
+*/
