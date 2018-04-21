@@ -6,7 +6,8 @@
 class IoCStrategy
 {
 public:
-	virtual void* Create(ArrayObjects const& args) throw(IoCException) = 0;
+	virtual void* Create(IObject const& args) throw(IoCException) = 0;
+	virtual void* Create() throw(IoCException) = 0;
 	virtual ~IoCStrategy() noexcept = 0;
 };
 

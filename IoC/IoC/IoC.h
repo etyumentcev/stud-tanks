@@ -2,7 +2,6 @@
 #define _IOC_H_
 
 #include <map>
-#include <memory>
 
 #include ".\Strategies\IoCStrategy.h"
 
@@ -18,22 +17,28 @@ public:
 class IoC
 {
 
-	std::map<std::string, Ptr<IoCStrategy>> catalog;
-
-	void* resolve(std::string const& key, ArrayObjects const& args);
+	std::map<std::string, Pointer<IoCStrategy>> catalog;
+	void* resolve(std::string const& key);
+	void* resolve(std::string const& key, IObject const& args);
 
 public:
 
-	template<class T> std::Ptr<T> Resolve(Key<T>, ArrayObjects const& args)
+	template<class T> Pointer<T> Resolve(Key<T> const& key, IObject const& args)
+	{
+		void *result = resolve(Key<T>::Tostring(), args);
+		retrun Pointer<T>(reinterpret_cast<T*>(result));
+	}
+	template<class T> Pointer<T> Resolve(Key<T> const& key)
 	{
 		void *result = resolve(Key<T>::Tostring());
-		retrun Ptr<T>(reinterpret_cast<T*>(result));
+		retrun Pointer<T>(reinterpret_cast<T*>(result));
 	}
 
-	void Register(Ptr<IoCStrategy>  strategy)
+	template<class T> void Register(Key<T> const& key, Pointer<IoCStrategy>  strategy)
 	{
-			catalog[Key<T>::ToString()] = stategy;
+		catalog[key::ToString()] = strategy;
 	}
+
 
 	IoC();
 

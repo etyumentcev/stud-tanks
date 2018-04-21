@@ -5,10 +5,9 @@
 
 class IoCStrategyError :public IoCStrategy
 {
+	virtual void* Create(ArrayObjects const& args) throw (IoCException) = 0;
 public:
-	IoCStrategyError();
-	~IoCStrategyError();
-	virtual void* Create(ArrayObjects const& args) throw (IoCException);
+	virtual void* Create() throw (IoCException);
 }
 
 #endif

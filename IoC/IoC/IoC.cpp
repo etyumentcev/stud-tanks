@@ -2,7 +2,7 @@
 
 IoC::IoC()
 {
-	std::map <std::string, Ptr<IoCStrategy>> c;
+	std::map <std::string, Pointer<IoCStrategy>> c;
 	catalog = c;
 }
 
@@ -11,7 +11,7 @@ IoC::~IoC() noexcept
 	catalog.clear();
 }
 
-void* IoC::resolve(std::string const& key, ArrayObjects const& args)
+void* IoC::resolve(std::string const& key, IObject const& args)
 {
 	try
 	{
@@ -23,3 +23,14 @@ void* IoC::resolve(std::string const& key, ArrayObjects const& args)
 	}
 }
 
+void* IoC::resolve(std::string const& key)
+{
+	try
+	{
+		return catalog[key]->Create();
+	}
+	catch (IoCException const &ex)
+	{
+		throw ex;
+	}
+}
