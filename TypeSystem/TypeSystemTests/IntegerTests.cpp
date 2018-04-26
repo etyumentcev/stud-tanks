@@ -1,26 +1,28 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 
-#include "../TypeSystem/ObjectBuffer.h"
+#include "../TypeSystem/Integer.h"
 #include "../TypeSystem/Pointer.h"
+#include "../TypeSystem/IoC.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using namespace fakeit;
 
 namespace TypeSystemTests
 {		
-	TEST_CLASS(ObjectBufferTests)
+	TEST_CLASS(IntegerTests)
 	{
 	public:
 		
-		TEST_METHOD(createObjectBuffer)
+		TEST_METHOD(createIntegerObject)
 		{
-			//ObjectBuffer
-		}
+			//auto pointerToIoC = make_shared<IoC>(IoC());
+			//Integer* i = new Integer(1);
 
-		TEST_METHOD(addObjectTest)
-		{
+			
+
 			
 		}
+
 	};
 }

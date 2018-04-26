@@ -8,7 +8,7 @@ class Integer : public Object
 	int value;
 public:
 	Integer(int _value);
-
+	virtual string getKey();
 	~Integer();
 };
 

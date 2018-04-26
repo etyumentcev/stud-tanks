@@ -1,4 +1,4 @@
-#include "SmartPointer.h"
+//#include "SmartPointer.h"
 /*
 template<typename T>
 SmartPointer<T>::SmartPointer(T* pointer) : pointer_(move(pointer))

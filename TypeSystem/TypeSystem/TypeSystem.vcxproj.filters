@@ -19,6 +19,24 @@
     <Filter Include="Файлы заголовков\Pointers">
       <UniqueIdentifier>{8d70b9a2-0bf8-4c5c-82a1-23b0e35c93f4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\IoC">
+      <UniqueIdentifier>{3ff840f8-8324-4e46-b64d-23759938a416}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\IoC">
+      <UniqueIdentifier>{7d871afc-3b88-4a70-afce-b3e0c09c3999}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Objects">
+      <UniqueIdentifier>{e69555e9-8454-468a-aac3-3ea7231afe71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Pointers">
+      <UniqueIdentifier>{26f5a7f6-210f-4338-adff-3185cfce7756}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Resolver">
+      <UniqueIdentifier>{e9f3fc5f-c164-4d5d-a2b5-d955ec2ef8e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Resolver">
+      <UniqueIdentifier>{f4a56885-a989-4c0d-900e-64a1cd14d08a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameItem.h">
@@ -45,22 +63,85 @@
     <ClInclude Include="Pointer.h">
       <Filter>Файлы заголовков\Pointers</Filter>
     </ClInclude>
-    <ClInclude Include="SmartPointer.h">
-      <Filter>Файлы заголовков\Pointers</Filter>
+    <ClInclude Include="IoC.h">
+      <Filter>Файлы заголовков\IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="IoCStrategy.h">
+      <Filter>Файлы заголовков\IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="IoCRegistration.h">
+      <Filter>Файлы заголовков\IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="IoCStrategyCommand.h">
+      <Filter>Файлы заголовков\IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="IoCStrategyError.h">
+      <Filter>Файлы заголовков\IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="IoCException.h">
+      <Filter>Файлы заголовков\IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="Resolver.h">
+      <Filter>Файлы заголовков\Resolver</Filter>
+    </ClInclude>
+    <ClInclude Include="Invoker.h">
+      <Filter>Файлы заголовков\Resolver</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>Файлы заголовков\Resolver</Filter>
+    </ClInclude>
+    <ClInclude Include="IObject.h">
+      <Filter>Файлы заголовков\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="IoCStrategyObjects.h">
+      <Filter>Файлы заголовков\IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectArgs.h">
+      <Filter>Файлы заголовков\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Key.h">
+      <Filter>Файлы заголовков\IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="IoCDestroyer.h">
+      <Filter>Файлы заголовков\IoC</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameItem.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Array.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="IoC.cpp">
+      <Filter>Исходные файлы\IoC</Filter>
     </ClCompile>
-    <ClCompile Include="SmartPointer.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="IoCRegistration.cpp">
+      <Filter>Исходные файлы\IoC</Filter>
+    </ClCompile>
+    <ClCompile Include="Array.cpp">
+      <Filter>Исходные файлы\Objects</Filter>
     </ClCompile>
     <ClCompile Include="ObjectBuffer.cpp">
-      <Filter>Исходные файлы</Filter>
+      <Filter>Исходные файлы\Pointers</Filter>
+    </ClCompile>
+    <ClCompile Include="Pointer.cpp">
+      <Filter>Исходные файлы\Pointers</Filter>
+    </ClCompile>
+    <ClCompile Include="IoCStrategyCommand.cpp">
+      <Filter>Исходные файлы\IoC</Filter>
+    </ClCompile>
+    <ClCompile Include="IoCStrategyError.cpp">
+      <Filter>Исходные файлы\IoC</Filter>
+    </ClCompile>
+    <ClCompile Include="IoCException.cpp">
+      <Filter>Исходные файлы\IoC</Filter>
+    </ClCompile>
+    <ClCompile Include="Resolver.cpp">
+      <Filter>Исходные файлы\Resolver</Filter>
+    </ClCompile>
+    <ClCompile Include="IoCStrategyObjects.cpp">
+      <Filter>Исходные файлы\IoC</Filter>
+    </ClCompile>
+    <ClCompile Include="IoCDestroyer.cpp">
+      <Filter>Исходные файлы\IoC</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 #include "ObjectBuffer.h"
 
-ObjectBuffer::ObjectBuffer(vector<Pointer<Object>*> buffer) : buffer_(move(buffer))
+ObjectBuffer::ObjectBuffer(vector<Pointer<Object>> buffer) : buffer_(move(buffer))
 {
 
 }
@@ -27,12 +27,12 @@ ObjectBuffer& ObjectBuffer::operator=(ObjectBuffer && otherObjectBuffer) noexcep
 	return *this;
 }
 
-Pointer<Object>* ObjectBuffer::getPointerToObject(size_t index)
+Pointer<Object> ObjectBuffer::getPointerToObject(size_t index)
 {
 	return buffer_.at(index);
 }
 
-void ObjectBuffer::addObject(Pointer<Object>* newObject)
+void ObjectBuffer::addObject(Pointer<Object> newObject)
 {
 	buffer_.push_back(newObject);
 }

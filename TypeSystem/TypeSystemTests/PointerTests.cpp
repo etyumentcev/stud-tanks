@@ -1,26 +1,24 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 
-#include "../TypeSystem/ObjectBuffer.h"
 #include "../TypeSystem/Pointer.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
 using namespace fakeit;
 
 namespace TypeSystemTests
 {		
-	TEST_CLASS(ObjectBufferTests)
+	TEST_CLASS(PointerTests)
 	{
 	public:
 		
-		TEST_METHOD(createObjectBuffer)
+		TEST_METHOD(createPointer)
 		{
-			//ObjectBuffer
+			Pointer<int> integer = new int;
+			*integer = 3;
+			Assert::AreEqual<int>(3, *integer);
 		}
 
-		TEST_METHOD(addObjectTest)
-		{
-			
-		}
 	};
 }

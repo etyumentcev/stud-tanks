@@ -117,19 +117,40 @@
   <ItemGroup>
     <ClInclude Include="Array.h" />
     <ClInclude Include="Bool.h" />
+    <ClInclude Include="Command.h" />
     <ClInclude Include="GameItem.h" />
     <ClInclude Include="Integer.h" />
+    <ClInclude Include="Invoker.h" />
+    <ClInclude Include="IObject.h" />
+    <ClInclude Include="IoC.h" />
+    <ClInclude Include="IoCDestroyer.h" />
+    <ClInclude Include="IoCException.h" />
+    <ClInclude Include="IoCRegistration.h" />
+    <ClInclude Include="IoCStrategy.h" />
+    <ClInclude Include="IoCStrategyCommand.h" />
+    <ClInclude Include="IoCStrategyError.h" />
+    <ClInclude Include="IoCStrategyObjects.h" />
+    <ClInclude Include="Key.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="ObjectArgs.h" />
     <ClInclude Include="ObjectBuffer.h" />
     <ClInclude Include="Pointer.h" />
-    <ClInclude Include="SmartPointer.h" />
+    <ClInclude Include="Resolver.h" />
     <ClInclude Include="String.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Array.cpp" />
     <ClCompile Include="GameItem.cpp" />
+    <ClCompile Include="IoC.cpp" />
+    <ClCompile Include="IoCDestroyer.cpp" />
+    <ClCompile Include="IoCException.cpp" />
+    <ClCompile Include="IoCRegistration.cpp" />
+    <ClCompile Include="IoCStrategyCommand.cpp" />
+    <ClCompile Include="IoCStrategyError.cpp" />
+    <ClCompile Include="IoCStrategyObjects.cpp" />
     <ClCompile Include="ObjectBuffer.cpp" />
-    <ClCompile Include="SmartPointer.cpp" />
+    <ClCompile Include="Pointer.cpp" />
+    <ClCompile Include="Resolver.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

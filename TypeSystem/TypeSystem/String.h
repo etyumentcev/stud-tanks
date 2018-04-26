@@ -3,10 +3,7 @@
 
 #include "Object.h"
 
-#include <string>
 #include <memory>
-
-using namespace std;
 
 class String : public Object
 {

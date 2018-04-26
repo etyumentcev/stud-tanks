@@ -7,8 +7,6 @@
 #include <vector>
 #include <memory>
 
-using namespace std;
-
 class Array : public Object
 {
 	vector<Pointer<Object>*> mArray;

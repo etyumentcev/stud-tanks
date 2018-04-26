@@ -156,8 +156,12 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="IntegerTests.cpp" />
+    <ClCompile Include="IoCStrategyObjectsTests.cpp" />
+    <ClCompile Include="IoCTests.cpp" />
+    <ClCompile Include="ObjectArgsTests.cpp" />
     <ClCompile Include="ObjectBufferTests.cpp" />
-    <ClCompile Include="SmartPointerTests.cpp" />
+    <ClCompile Include="PointerTests.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
