@@ -30,6 +30,12 @@
     <ClInclude Include="Command.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="IocEmulator.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="IObj.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Move.cpp">
