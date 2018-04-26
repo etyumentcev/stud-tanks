@@ -1,9 +1,13 @@
 #include "IoC.h"
 
-IoC::IoC()
+IoC& IoC::getInstance()
 {
-	std::map <std::string, Pointer<IoCStrategy>> c;
-	catalog = c;
+	if (!self)
+	{
+		self = new IoC();
+		destroyer.initialize(self);
+	}
+	return *self;
 }
 
 IoC::~IoC() noexcept
@@ -11,7 +15,7 @@ IoC::~IoC() noexcept
 	catalog.clear();
 }
 
-void* IoC::resolve(std::string const& key, IObject const& args)
+void* IoC::resolve(std::string const& key, Object const& args)
 {
 	try
 	{
@@ -33,4 +37,15 @@ void* IoC::resolve(std::string const& key)
 	{
 		throw ex;
 	}
+}
+
+void IoCDestroyer::initialize(IoC* m)
+{
+	master = m;
+}
+
+
+IoCDestroyer::~IoCDestroyer()
+{
+	delete master;
 }

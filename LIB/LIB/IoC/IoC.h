@@ -17,13 +17,21 @@ public:
 class IoC
 {
 
+	static IoC* self;
+	static IoCDestroyer destroyer;
+	IoC();
+
 	std::map<std::string, Pointer<IoCStrategy>> catalog;
 	void* resolve(std::string const& key);
-	void* resolve(std::string const& key, IObject const& args);
+	void* resolve(std::string const& key, Object const& args);
 
+	virtual ~IoC() noexcept;
+	friend class IoCDestroyer;
 public:
 
-	template<class T> Pointer<T> Resolve(Key<T> const& key, IObject const& args)
+	static IoC& getInstance();
+
+	template<class T> Pointer<T> Resolve(Key<T> const& key, Object const& args)
 	{
 		void *result = resolve(Key<T>::Tostring(), args);
 		retrun Pointer<T>(reinterpret_cast<T*>(result));
@@ -38,11 +46,14 @@ public:
 	{
 		catalog[key::ToString()] = strategy;
 	}
+};
 
-
-	IoC();
-
-	virtual ~IoC() noexcept;
+class IoCDestroyer
+{
+	IoC * master;
+public:
+	~IoCDestroyer();
+	void initialize(IoC* p);
 };
 
 #endif
