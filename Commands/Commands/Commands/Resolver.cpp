@@ -1,14 +1,14 @@
 #include "Resolver.h"
 
-void Resolver::addOneElement(String str, Command* obj)
+void Resolver::addOneElement(Obj str, Command* obj)
 {
-	mapOfCommand.insert( std::pair<String, Command*> (str, obj));
+	mapOfCommand.insert( std::pair<Obj, Command*> (str, obj));
 }
 
-void Resolver::createAndUseCommand(ArrayObjects &args)
+void Resolver::createAndUseCommand(Obj &args)
 {
 	Command *command = mapOfCommand[args[0]];
-	command->Action(/*массив*/);
+	command->Action(args[1]);
 	delete command;
 }
 

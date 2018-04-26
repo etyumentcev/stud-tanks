@@ -1,13 +1,19 @@
 #ifndef _COMMAND_H_
 #define _COMMAND_H_
 
+/*template<> class Key<Command>
+{
+public:
+	static std::string ToString()
+	{
+		return "Command"
+	}
+};*/
+
+
 class Command
 {
-	//ArrayObjects args;
 public:
-	//Command(ArrayObject &args);
-	Command(Command const & other); /*спросить насчет конструктора копии у абстрактного класса...*/
-	Command();
 	virtual void Action() = 0;
 };
 

@@ -7,14 +7,14 @@
 #include "Shoot.h"
 #include <map>
 
-typedef std::map<String, Command*> HashMap;
+typedef std::map<Obj, Command*> HashMap;
 
 class Resolver
 {
 	HashMap mapOfCommand;
 public:
-	void createAndUseCommand(ArrayObjects &args);
-	void addOneElement(String, Command*);
+	void createAndUseCommand(Obj &args);
+	void addOneElement(Obj, Command*);
 	HashMap fillMapOfCommand();
 };
 
