@@ -13,42 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы заголовков\IoC">
+      <UniqueIdentifier>{d4fec76b-ecaa-4191-93b7-ac9d786d7a7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\IoC">
+      <UniqueIdentifier>{23fe838a-a770-4287-8851-4cb48908831b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IoC\IoC.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="IoC\IoCRegistration.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="IoC\Strategies\IoCStrategy.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="IoC\Strategies\IoCStrategyCommand.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="IoC\Strategies\IoCStrategyError.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="IoC\Exceptions\IoCException.h">
-      <Filter>Файлы заголовков</Filter>
+    <ClInclude Include="IoC.h">
+      <Filter>Файлы заголовков\IoC</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="IoC\Exceptions\IoCException.cpp">
-      <Filter>Файлы ресурсов</Filter>
-    </ClCompile>
-    <ClCompile Include="IoC\Strategies\IoCStrategyCommand.cpp">
-      <Filter>Файлы ресурсов</Filter>
-    </ClCompile>
-    <ClCompile Include="IoC\Strategies\IoCStrategyError.cpp">
-      <Filter>Файлы ресурсов</Filter>
-    </ClCompile>
-    <ClCompile Include="IoC\IoC.cpp">
-      <Filter>Файлы ресурсов</Filter>
-    </ClCompile>
-    <ClCompile Include="IoC\IoCRegistration.cpp">
-      <Filter>Файлы ресурсов</Filter>
+    <ClCompile Include="IoC.cpp">
+      <Filter>Файлы ресурсов\IoC</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -19,23 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IoC\Exceptions\IoCException.h" />
-    <ClInclude Include="IoC\IoC.h" />
-    <ClInclude Include="IoC\IoCRegistration.h" />
-    <ClInclude Include="IoC\Strategies\IoCStrategy.h" />
-    <ClInclude Include="IoC\Strategies\IoCStrategyCommand.h" />
-    <ClInclude Include="IoC\Strategies\IoCStrategyError.h" />
+    <ClInclude Include="IoC.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="IoC\Exceptions\IoCException.cpp" />
-    <ClCompile Include="IoC\IoC.cpp" />
-    <ClCompile Include="IoC\IoCRegistration.cpp" />
-    <ClCompile Include="IoC\Strategies\IoCStrategyCommand.cpp" />
-    <ClCompile Include="IoC\Strategies\IoCStrategyError.cpp" />
+    <ClCompile Include="IoC.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{914009AF-42D7-4207-9741-E989A6ECE553}</ProjectGuid>
+    <ProjectGuid>{3B2E0799-DD66-49CA-9A25-46A7410937DB}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>LIB</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>

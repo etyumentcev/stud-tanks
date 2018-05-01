@@ -1,0 +1,15 @@
+﻿  IoCTest.cpp
+e:\github\stud-tanks\lib\tests\ioctest.cpp(16): error C2039: Register: не является членом "IoC"
+  e:\github\stud-tanks\lib\lib\ioc.h(7): note:  см. объявление "IoC"
+e:\github\stud-tanks\lib\tests\ioctest.cpp(16): error C2039: CreateNew: не является членом "IoC"
+  e:\github\stud-tanks\lib\lib\ioc.h(7): note:  см. объявление "IoC"
+e:\github\stud-tanks\lib\tests\ioctest.cpp(16): error C2061: синтаксическая ошибка: идентификатор "CreateNew"
+e:\github\stud-tanks\lib\tests\ioctest.cpp(16): error C3861: Register: идентификатор не найден
+e:\github\stud-tanks\lib\tests\ioctest.cpp(17): error C2065: Pointer: необъявленный идентификатор
+e:\github\stud-tanks\lib\tests\ioctest.cpp(17): error C2062: тип "int" не требуется
+e:\github\stud-tanks\lib\tests\ioctest.cpp(17): error C2039: Resolve: не является членом "IoC"
+  e:\github\stud-tanks\lib\lib\ioc.h(7): note:  см. объявление "IoC"
+e:\github\stud-tanks\lib\tests\ioctest.cpp(19): error C2065: Pointer: необъявленный идентификатор
+e:\github\stud-tanks\lib\tests\ioctest.cpp(19): error C2062: тип "int" не требуется
+e:\github\stud-tanks\lib\tests\ioctest.cpp(20): error C2065: int2: необъявленный идентификатор
+e:\github\stud-tanks\lib\tests\ioctest.cpp(21): error C2065: int2: необъявленный идентификатор
