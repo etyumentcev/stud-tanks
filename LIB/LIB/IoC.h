@@ -2,14 +2,15 @@
 #define _IOC_H_
 
 #include <map>
-#include <string>
+#include "ContainerError.h"
 
 namespace IoC
 {
+
 	class StrategyHandler
 	{
 	public:
-		virtual ~StrategyHandler() noexcept;
+		virtual ~StrategyHandler() noexcept = 0;
 	};
 
 	class ContainerDestroyer;
@@ -23,8 +24,7 @@ namespace IoC
 	public:
 		static Container* Instance();
 		void Add(std::string const& key, StrategyHandler* handler);
-		StrategyHandler* Resolve(std::string const& key) throw(ContainerError);
-		void Register(std::string const& key, StrategyHandler* strategy);
+		StrategyHandler* Resolve(std::string const& key) throw( ContainerError );
 	};
 
 	class ContainerDestroyer
@@ -35,5 +35,6 @@ namespace IoC
 		void initialize(Container* m);
 	};
 
+	void Register(std::string const& key, StrategyHandler* strategy) throw(ContainerError);
 }
 #endif
