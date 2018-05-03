@@ -16,6 +16,9 @@
     <Filter Include="Файлы исходного кода\IoC">
       <UniqueIdentifier>{b8983b8b-f22b-4c8e-a7fd-11f08c912adb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы исходного кода\Pointer">
+      <UniqueIdentifier>{21c5e9c3-ef9b-4691-8d04-1a78167d2157}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -31,6 +34,9 @@
     </ClCompile>
     <ClCompile Include="IoCTest.cpp">
       <Filter>Файлы исходного кода\IoC</Filter>
+    </ClCompile>
+    <ClCompile Include="PointerTests.cpp">
+      <Filter>Файлы исходного кода\Pointer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -31,4 +31,28 @@ namespace IoC
 		container.insert(std::pair<std::string, StrategyHandler*>(key, handler));
 	}
 
-}
+	StrategyHandler* Container::Resolve(std::string const& key) throw(ContainerError)
+	{
+		auto iterator = container.find(key);
+		if (iterator != container.end())
+		{
+			return iterator->second;
+		}
+		else
+		{
+			throw ContainerError("Wrong Key.");
+		}
+	}
+	
+	void Register(std::string const& key, StrategyHandler* strategy) throw(ContainerError)
+	{
+		Container::Instance()->Add(key, strategy);
+	}
+};
+
+
+
+
+
+
+
