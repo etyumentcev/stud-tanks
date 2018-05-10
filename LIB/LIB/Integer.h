@@ -2,13 +2,20 @@
 #define _INTEGER_H_
 
 #include "Object.h"
+#include <utility>
 
 class Integer : public Object
 {
 	int value;
 public:
 	Integer(int _value);
-	virtual string getKey();
+	Integer();
+
+	string getKey();
+	void setArgs();
+
+	operator int();
+
 	~Integer();
 };
 

@@ -13,6 +13,8 @@ public:
 			pointerMonitor->acquire(); 
 		} 
 
+	Pointer();
+
 	Pointer(Pointer<T> const& other) 
 	: pointerMonitor(other.pointerMonitor) 
 		{ 

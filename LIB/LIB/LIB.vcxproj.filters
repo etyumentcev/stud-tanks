@@ -87,7 +87,13 @@
     <ClInclude Include="GameItem.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="ObjectStrategy.h">
+    <ClInclude Include="ResolveError.h">
+      <Filter>Файлы заголовков\IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="RegisterError.h">
+      <Filter>Файлы заголовков\IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="StrategyPointer.h">
       <Filter>Файлы заголовков\IoC</Filter>
     </ClInclude>
   </ItemGroup>
@@ -115,6 +121,15 @@
     </ClCompile>
     <ClCompile Include="GameItem.cpp">
       <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="ResolveError.cpp">
+      <Filter>Файлы ресурсов\IoC</Filter>
+    </ClCompile>
+    <ClCompile Include="RegisterError.cpp">
+      <Filter>Файлы ресурсов\IoC</Filter>
+    </ClCompile>
+    <ClCompile Include="Integer.cpp">
+      <Filter>Файлы ресурсов\Object</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

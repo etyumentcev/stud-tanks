@@ -3,6 +3,8 @@
 
 #include "Pointer.h"
 #include "IoC.h"
+#include "PointerCounterResourceMonitor.h"
+#include "AlwaysDeleteResourceStrategy.h"
 
 namespace IoC
 {

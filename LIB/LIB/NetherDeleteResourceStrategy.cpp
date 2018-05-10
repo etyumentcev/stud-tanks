@@ -5,7 +5,7 @@ void NetherDeleteResourceStrategy::apply(void*) throw()
 
 }
 
-NetherDeleteResourceStrategy::~NetherDeleteResourceStrategy() throw() 
+NetherDeleteResourceStrategy::~NetherDeleteResourceStrategy() 
 {
 
 } 
