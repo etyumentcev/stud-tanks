@@ -19,10 +19,34 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AlwaysDeleteResourceStrategy.h" />
+    <ClInclude Include="Array.h" />
+    <ClInclude Include="Bool.h" />
+    <ClInclude Include="ContainerError.h" />
+    <ClInclude Include="DeleteResourceStrategy.h" />
+    <ClInclude Include="GameItem.h" />
+    <ClInclude Include="Integer.h" />
+    <ClInclude Include="IObject.h" />
     <ClInclude Include="IoC.h" />
+    <ClInclude Include="NetherDeleteResourceStrategy.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="ObjectArgs.h" />
+    <ClInclude Include="ObjectBuffer.h" />
+    <ClInclude Include="Pointer.h" />
+    <ClInclude Include="PointerCounterResourceMonitor.h" />
+    <ClInclude Include="ResourceAllocationException.h" />
+    <ClInclude Include="ResourceMonitor.h" />
+    <ClInclude Include="String.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AlwaysDeleteResourceStrategy.cpp" />
+    <ClCompile Include="Array.cpp" />
+    <ClCompile Include="ContainerError.cpp" />
+    <ClCompile Include="GameItem.cpp" />
     <ClCompile Include="IoC.cpp" />
+    <ClCompile Include="NetherDeleteResourceStrategy.cpp" />
+    <ClCompile Include="ObjectBuffer.cpp" />
+    <ClCompile Include="PointerCounterResourceMonitor.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

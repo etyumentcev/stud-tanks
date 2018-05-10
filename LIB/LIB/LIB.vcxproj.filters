@@ -19,15 +19,99 @@
     <Filter Include="Файлы ресурсов\IoC">
       <UniqueIdentifier>{23fe838a-a770-4287-8851-4cb48908831b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы заголовков\Pointer">
+      <UniqueIdentifier>{b003cdb7-3f42-4258-a802-250ced2d9f91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Pointer">
+      <UniqueIdentifier>{2192f4e2-98da-419e-8ea1-779d3de70f2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\Object">
+      <UniqueIdentifier>{50585d36-d6ce-441a-b7f6-883bd8d5444b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\Object">
+      <UniqueIdentifier>{c3eedbbf-0584-4b26-bf25-e64450a7b74f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IoC.h">
       <Filter>Файлы заголовков\IoC</Filter>
     </ClInclude>
+    <ClInclude Include="Pointer.h">
+      <Filter>Файлы заголовков\Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceMonitor.h">
+      <Filter>Файлы заголовков\Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceAllocationException.h">
+      <Filter>Файлы заголовков\Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteResourceStrategy.h">
+      <Filter>Файлы заголовков\Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="AlwaysDeleteResourceStrategy.h">
+      <Filter>Файлы заголовков\Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="NetherDeleteResourceStrategy.h">
+      <Filter>Файлы заголовков\Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="PointerCounterResourceMonitor.h">
+      <Filter>Файлы заголовков\Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="IObject.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ContainerError.h">
+      <Filter>Файлы заголовков\IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="Array.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Bool.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Integer.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="String.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectArgs.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Файлы заголовков\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectBuffer.h">
+      <Filter>Файлы заголовков\Pointer</Filter>
+    </ClInclude>
+    <ClInclude Include="GameItem.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IoC.cpp">
       <Filter>Файлы ресурсов\IoC</Filter>
+    </ClCompile>
+    <ClCompile Include="PointerCounterResourceMonitor.cpp">
+      <Filter>Файлы ресурсов\Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="AlwaysDeleteResourceStrategy.cpp">
+      <Filter>Файлы ресурсов\Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="NetherDeleteResourceStrategy.cpp">
+      <Filter>Файлы ресурсов\Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="ContainerError.cpp">
+      <Filter>Файлы ресурсов\IoC</Filter>
+    </ClCompile>
+    <ClCompile Include="Array.cpp">
+      <Filter>Файлы ресурсов\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectBuffer.cpp">
+      <Filter>Файлы ресурсов\Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="GameItem.cpp">
+      <Filter>Файлы ресурсов</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -39,7 +39,7 @@ namespace IoC
 		}
 	}
 
-	StrategyHandler* Resolve(std::string const& key)
+	StrategyHandler* Resolve(std::string const& key) throw (ResolveError)
 	{
 		auto iterator = Container::container.find(key);
 		if (iterator != Container::container.end())

@@ -41,4 +41,5 @@ namespace IoC
 	void Register(std::string const& key, StrategyHandler* strategy) throw(RegisterError);
 	StrategyHandler* Resolve(std::string const& key) throw(ResolveError);
 }
+
 #endif
