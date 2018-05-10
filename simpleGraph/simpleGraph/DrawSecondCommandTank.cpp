@@ -7,14 +7,14 @@ using namespace std;
 
 DrawSecondCommandTank::DrawSecondCommandTank
 (
-	int x1, 
-	int y1, 
-	int direction1
+	int x, 
+	int y, 
+	int direction
 )
 {
-	x = x1;
-	y = y1;
-	direction = direction1;
+	this->x = x;
+	this->y = y;
+	this->direction = direction;
 }
 
 void DrawSecondCommandTank::Draw()

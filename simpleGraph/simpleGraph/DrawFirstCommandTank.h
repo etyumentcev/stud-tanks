@@ -2,6 +2,7 @@
 #define _DRAWFIRSTCOMMANDTANK_H_
 
 #include "Figure.h"
+#include <vector>
 
 class DrawFirstCommandTank :public Figure
 {

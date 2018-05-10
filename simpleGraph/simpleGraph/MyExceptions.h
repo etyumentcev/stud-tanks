@@ -3,7 +3,7 @@
 
 #include <exception>
 
-class CreateMatrixError : public std::exception
+class OpenFileError : public std::exception
 {
 public:
 	char* const Reason() const;

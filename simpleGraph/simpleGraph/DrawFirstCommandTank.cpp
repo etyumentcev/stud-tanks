@@ -7,11 +7,11 @@ using namespace std;
 
 
 
-DrawFirstCommandTank::DrawFirstCommandTank(int x1, int y1, int direction1)
+DrawFirstCommandTank::DrawFirstCommandTank(int x, int y, int direction)
 {
-	x = x1;
-	y = y1;
-	direction = direction1;
+	this->x = x;
+	this->y = y;
+	this->direction = direction;
 }
 
 void DrawFirstCommandTank::Draw()
