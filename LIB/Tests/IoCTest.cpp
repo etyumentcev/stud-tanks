@@ -2,6 +2,7 @@
 #include "CppUnitTest.h"
 
 #include "..\Lib\IoC.h"
+#include "..\Lib\Pointer.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -12,9 +13,11 @@ namespace LibTests
 	TEST_CLASS(IoCTest)
 	{
 	public:
-
+		
 		TEST_METHOD(TestMethod1)
 		{
+
+
 			Register("int", new CreateNew<int>());
 			Pointer<int> int1 = IoC::Resolve<int>("int");
 

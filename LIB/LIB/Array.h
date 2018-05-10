@@ -9,14 +9,14 @@
 
 class Array : public Object
 {
-	vector<Pointer<Object>*> mArray;
+	vector<Pointer<Object>> mArray;
 public:
-	explicit Array(vector<Pointer<Object>*> array);
+	explicit Array(vector<Pointer<Object>> array);
 	
-	Pointer<Object>* operator[](size_t index);
+	Pointer<Object> operator[](size_t index);
 
-	Pointer<Object>* getValue(size_t index) noexcept(false);
-	void setValue(Pointer<Object>* new_value);
+	Pointer<Object> getValue(size_t index) noexcept(false);
+	void setValue(Pointer<Object> new_value);
 
 	virtual ~Array();
 };

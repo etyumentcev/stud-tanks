@@ -49,13 +49,4 @@ namespace IoC
 		Container::Instance()->Add(key, strategy);
 	}
 };
-<<<<<<< HEAD
 
-
-
-
-
-
-
-=======
->>>>>>> 5352c24623ff2cabd883deb3983aa121ff6f3698

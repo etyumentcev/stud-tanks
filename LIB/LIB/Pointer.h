@@ -40,7 +40,7 @@ public:
 
 	virtual ~Pointer() 
 		{ 
-			poointerMonitor->release(); 
+			pointerMonitor->release(); 
 		} 
 
 }; 

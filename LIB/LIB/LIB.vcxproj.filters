@@ -87,6 +87,9 @@
     <ClInclude Include="GameItem.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="ObjectStrategy.h">
+      <Filter>Файлы заголовков\IoC</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="IoC.cpp">
