@@ -28,25 +28,39 @@ namespace IoC
 
 	void Container::Add(std::string const& key, StrategyHandler* handler)
 	{
-		container.insert(std::pair<std::string, StrategyHandler*>(key, handler));
+		auto iterator = container.find(key);
+		if (iterator == container.end())
+		{
+			container.insert(std::pair<std::string, StrategyHandler*>(key, handler));
+		}
+		else
+		{
+			throw RegisterError("Already filled position", key);
+		}
 	}
 
-	StrategyHandler* Container::Resolve(std::string const& key) throw(ContainerError)
+	StrategyHandler* Resolve(std::string const& key) throw (ResolveError)
 	{
-		auto iterator = container.find(key);
-		if (iterator != container.end())
+		auto iterator = Container::container.find(key);
+		if (iterator != Container::container.end())
 		{
 			return iterator->second;
 		}
 		else
 		{
-			throw ContainerError("Wrong Key.");
+			throw ResolveError("Wrong Key.", key);
 		}
 	}
-	
-	void Register(std::string const& key, StrategyHandler* strategy) throw(ContainerError)
+
+	void Register(std::string const& key, StrategyHandler* strategy) throw(RegisterError)
 	{
-		Container::Instance()->Add(key, strategy);
+		try
+		{
+			Container::Instance()->Add(key, strategy);
+		}
+		catch (RegisterError const& ex)
+		{
+			throw ex;
+		}
 	}
 };
-
