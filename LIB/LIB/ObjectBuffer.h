@@ -1,26 +1,21 @@
 #ifndef _OBJECT_BUFFER_H_
 #define _OBJECT_BUFFER_H_
 
-#include "Object.h"
-#include "Pointer.h"
-
 #include <vector>
-#include <utility>
+
+#include "IObject.h"
+#include "Pointer.h"
 
 class ObjectBuffer
 {
-
-	vector<Pointer<Object>> buffer_;
-
+	std::vector<Pointer<IObject>> buffer_;
 public:
+	explicit ObjectBuffer(std::vector<Pointer<IObject>> buffer);
 
-	explicit ObjectBuffer(vector<Pointer<Object>> buffer);
-
-	Pointer<Object> getPointerToObject(size_t index);
-	void addObject(Pointer<Object> newObject);
+	Pointer<IObject> getPointerToObject(size_t index);
+	void addObject(Pointer<IObject> newObject);
 
 	virtual ~ObjectBuffer();
-
 };
 
 #endif

@@ -9,3 +9,8 @@ NetherDeleteResourceStrategy::~NetherDeleteResourceStrategy()
 {
 
 } 
+
+NetherDeleteResourceStrategy::NetherDeleteResourceStrategy() 
+{
+
+} 

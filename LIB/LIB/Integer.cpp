@@ -1,13 +1,24 @@
 #include "Integer.h"
 
-Integer::Integer(int _value) : value(move(_value))
+Integer::Integer(const int value) : value_(value)
 {
 
 }
 
-Integer::operator int()
+std::string Integer::getKey() const
 {
-	return this->value;
+	return "Integer";
+}
+
+Integer& Integer::operator=(const int value)
+{
+	value_ = value;
+	return *this;
+}
+
+Integer::operator int() const
+{
+	return this->value_;
 }
 
 Integer::~Integer()

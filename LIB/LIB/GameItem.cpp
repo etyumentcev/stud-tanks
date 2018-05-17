@@ -1,11 +1,13 @@
 #include "GameItem.h"
 
-GameItem::GameItem(map<string, unique_ptr<Object>> _item) : item(move(_item))
+using namespace std;
+
+GameItem::GameItem(map<string, unique_ptr<IObject>> _item) : item(move(_item))
 {
 
 }
 
-unique_ptr<Object> GameItem::getValue(const string& key) throw (out_of_range)
+unique_ptr<IObject> GameItem::getValue(const string& key) throw (out_of_range)
 {
 	try
 	{
@@ -17,7 +19,7 @@ unique_ptr<Object> GameItem::getValue(const string& key) throw (out_of_range)
 	}
 }
 
-void GameItem::setValue(const string& key, unique_ptr<Object> newValue) throw (out_of_range)
+void GameItem::setValue(const string& key, unique_ptr<IObject> newValue) throw (out_of_range)
 {
 	try
 	{

@@ -1,22 +1,20 @@
 #ifndef _INTEGER_H_
 #define _INTEGER_H_
 
-#include "Object.h"
-#include <utility>
+#include "IObject.h"
 
-class Integer : public Object
+class Integer : public IObject
 {
-	int value;
+	int value_;
 public:
-	Integer(int _value);
-	Integer();
+	explicit Integer(int value);
 
-	string getKey();
-	void setArgs();
+	std::string getKey() const override;
 
-	operator int();
+	Integer& operator=(int value);
+	explicit operator int() const;
 
-	~Integer();
+	virtual ~Integer();
 };
 
 #endif

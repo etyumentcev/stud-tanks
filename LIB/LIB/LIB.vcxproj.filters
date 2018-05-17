@@ -75,12 +75,6 @@
     <ClInclude Include="String.h">
       <Filter>Файлы заголовков\Object</Filter>
     </ClInclude>
-    <ClInclude Include="ObjectArgs.h">
-      <Filter>Файлы заголовков\Object</Filter>
-    </ClInclude>
-    <ClInclude Include="Object.h">
-      <Filter>Файлы заголовков\Object</Filter>
-    </ClInclude>
     <ClInclude Include="ObjectBuffer.h">
       <Filter>Файлы заголовков\Pointer</Filter>
     </ClInclude>

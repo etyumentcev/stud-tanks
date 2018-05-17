@@ -4,6 +4,7 @@ namespace IoC
 {
 	Container* Container::self = 0;
 	ContainerDestroyer Container::destroyer;
+	std::map<std::string, StrategyHandler*> Container::container;
 
 	Container* Container::Instance()
 	{
@@ -39,7 +40,7 @@ namespace IoC
 		}
 	}
 
-	StrategyHandler* Resolve(std::string const& key) throw (ResolveError)
+	StrategyHandler* Container::Resolve(std::string const& key) throw (ResolveError)
 	{
 		auto iterator = Container::container.find(key);
 		if (iterator != Container::container.end())
@@ -63,4 +64,4 @@ namespace IoC
 			throw ex;
 		}
 	}
-};
+}

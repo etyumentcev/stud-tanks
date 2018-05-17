@@ -29,8 +29,6 @@
     <ClInclude Include="IObject.h" />
     <ClInclude Include="IoC.h" />
     <ClInclude Include="NetherDeleteResourceStrategy.h" />
-    <ClInclude Include="Object.h" />
-    <ClInclude Include="ObjectArgs.h" />
     <ClInclude Include="ObjectBuffer.h" />
     <ClInclude Include="Pointer.h" />
     <ClInclude Include="PointerCounterResourceMonitor.h" />

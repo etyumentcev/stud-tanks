@@ -3,19 +3,12 @@
 
 #include <string>
 
-using namespace std;
-
 class IObject
 {
-
 public:
+	virtual std::string getKey() const = 0;
 
-	virtual string getKey() = 0;
-
-	virtual void setArgs() = 0;
-
-	virtual ~IObject() = 0;
-
+	virtual ~IObject() {}
 };
 
 #endif

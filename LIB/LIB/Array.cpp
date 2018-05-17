@@ -1,30 +1,18 @@
 #include "Array.h"
 
-Array::Array(vector<Pointer<Object>> array) : mArray(move(array))
+Array::Array(std::vector<Pointer<IObject>> array) : mArray(array)
 {
 
 }
 
-Pointer<Object> Array::operator[](const size_t index)
+Pointer<IObject> Array::operator[](const size_t index) const
 {
 	return mArray.at(index);
 }
 
-Pointer<Object> Array::getValue(const size_t index) noexcept(false)
+Pointer<IObject> Array::operator[](const size_t index)
 {
-	try
-	{
-		return mArray.at(index);
-	}
-	catch (out_of_range& ex)
-	{
-		throw ex;
-	}
-}
-
-void Array::setValue(Pointer<Object> newValue)
-{
-	mArray.push_back(move(newValue));
+	return mArray.at(index);
 }
 
 Array::~Array()

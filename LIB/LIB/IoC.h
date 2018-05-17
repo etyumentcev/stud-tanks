@@ -25,8 +25,8 @@ namespace IoC
 		friend class ContainerDestroyer;
 		void Add(std::string const& key, StrategyHandler* handler);
 		friend  void Register(std::string const& key, StrategyHandler* strategy) throw(RegisterError);
-		friend StrategyHandler* Resolve(std::string const& key) throw(ResolveError);
 	public:
+		StrategyHandler* Resolve(std::string const& key) throw(ResolveError);
 		static Container* Instance();
 	};
 
@@ -39,7 +39,7 @@ namespace IoC
 	};
 
 	void Register(std::string const& key, StrategyHandler* strategy) throw(RegisterError);
-	StrategyHandler* Resolve(std::string const& key) throw(ResolveError);
+	
 }
 
 #endif

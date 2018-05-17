@@ -5,46 +5,47 @@
 
 template<typename T> class Pointer
 { 
-	ResourceMonitor* pointerMonitor; 
-public: 
-	Pointer(ResourceMonitor *_pointerMonitor) 
-	: pointerMonitor(_pointerMonitor) 
+	ResourceMonitor* pointerMonitor_; 
+public:
+	explicit Pointer(ResourceMonitor *pointerMonitor) 
+	: pointerMonitor_(pointerMonitor) 
 		{ 
-			pointerMonitor->acquire(); 
-		} 
+			pointerMonitor_->acquire(); 
+		}
 
-	Pointer();
+	Pointer(): pointerMonitor_(nullptr)
+		{
+
+		}
 
 	Pointer(Pointer<T> const& other) 
-	: pointerMonitor(other.pointerMonitor) 
+	: pointerMonitor_(other.pointerMonitor_) 
 		{ 
-			pointerMonitor->acquire(); 
+			pointerMonitor_->acquire(); 
 		} 
 
 	Pointer<T>& operator=(Pointer<T> const& other) 
 		{ 
-			other.pointerMonitor->acquire(); 
-			pointerMonitor->release(); 
-
-			pointerMonitor = other.pointerMonitor; 
+			other.pointerMonitor_->acquire(); 
+			pointerMonitor_->release();
+			pointerMonitor_ = other.pointerMonitor_; 
 			return *this; 
 		} 
 
 	T& operator*() 
 		{ 
-			return *reinterpret_cast<T*>(pointerMonitor->resource()); 
+			return *reinterpret_cast<T*>(pointerMonitor_->resource()); 
 		} 
 
 	T* operator->() 
 		{ 
-			return reinterpret_cast<T*>(pointerMonitor->resource()); 
+			return reinterpret_cast<T*>(pointerMonitor_->resource()); 
 		} 
 
 	virtual ~Pointer() 
 		{ 
-			pointerMonitor->release(); 
-		} 
-
+			pointerMonitor_->release(); 
+		}
 }; 
 
 #endif
