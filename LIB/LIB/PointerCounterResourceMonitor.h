@@ -11,7 +11,7 @@ class PointerCounterResourceMonitor: public ResourceMonitor
 	DeleteResourceStrategy *onDelete; 
 public: 
 	PointerCounterResourceMonitor(void *_pointer, DeleteResourceStrategy* _onDelete);
-
+	PointerCounterResourceMonitor();
 	virtual void acquire() throw();
 	virtual void release() throw();
 	virtual void* resource() throw();

@@ -13,6 +13,8 @@ public:
 			pointerMonitor->acquire(); 
 		} 
 
+	Pointer();
+
 	Pointer(Pointer<T> const& other) 
 	: pointerMonitor(other.pointerMonitor) 
 		{ 
@@ -40,7 +42,7 @@ public:
 
 	virtual ~Pointer() 
 		{ 
-			poointerMonitor->release(); 
+			pointerMonitor->release(); 
 		} 
 
 }; 

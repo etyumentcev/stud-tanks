@@ -34,8 +34,11 @@
     <ClInclude Include="ObjectBuffer.h" />
     <ClInclude Include="Pointer.h" />
     <ClInclude Include="PointerCounterResourceMonitor.h" />
+    <ClInclude Include="RegisterError.h" />
+    <ClInclude Include="ResolveError.h" />
     <ClInclude Include="ResourceAllocationException.h" />
     <ClInclude Include="ResourceMonitor.h" />
+    <ClInclude Include="StrategyPointer.h" />
     <ClInclude Include="String.h" />
   </ItemGroup>
   <ItemGroup>
@@ -43,10 +46,13 @@
     <ClCompile Include="Array.cpp" />
     <ClCompile Include="ContainerError.cpp" />
     <ClCompile Include="GameItem.cpp" />
+    <ClCompile Include="Integer.cpp" />
     <ClCompile Include="IoC.cpp" />
     <ClCompile Include="NetherDeleteResourceStrategy.cpp" />
     <ClCompile Include="ObjectBuffer.cpp" />
     <ClCompile Include="PointerCounterResourceMonitor.cpp" />
+    <ClCompile Include="RegisterError.cpp" />
+    <ClCompile Include="ResolveError.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -116,10 +122,12 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <DisableSpecificWarnings>4290; 5040</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -130,10 +138,12 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <DisableSpecificWarnings>4290;5040</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

@@ -1,16 +1,16 @@
 #include "Array.h"
 
-Array::Array(vector<Pointer<Object>*> array) : mArray(move(array))
+Array::Array(vector<Pointer<Object>> array) : mArray(move(array))
 {
 
 }
 
-Pointer<Object>* Array::operator[](const size_t index)
+Pointer<Object> Array::operator[](const size_t index)
 {
 	return mArray.at(index);
 }
 
-Pointer<Object>* Array::getValue(const size_t index) noexcept(false)
+Pointer<Object> Array::getValue(const size_t index) noexcept(false)
 {
 	try
 	{
@@ -22,7 +22,7 @@ Pointer<Object>* Array::getValue(const size_t index) noexcept(false)
 	}
 }
 
-void Array::setValue(Pointer<Object>* newValue)
+void Array::setValue(Pointer<Object> newValue)
 {
 	mArray.push_back(move(newValue));
 }

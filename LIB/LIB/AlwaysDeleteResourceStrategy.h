@@ -5,7 +5,8 @@
 
 class AlwaysDeleteResourceStrategy : public DeleteResourceStrategy 
 { 
-public: 
+public:
+	AlwaysDeleteResourceStrategy();
 	virtual void apply(void* resource) throw(); 
 	virtual ~AlwaysDeleteResourceStrategy() throw();
 }; 

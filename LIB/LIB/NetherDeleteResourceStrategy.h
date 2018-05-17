@@ -6,8 +6,10 @@
 class NetherDeleteResourceStrategy : public DeleteResourceStrategy 
 { 
 public: 
+	NetherDeleteResourceStrategy();
 	virtual void apply(void*) throw(); 
 	virtual ~NetherDeleteResourceStrategy() throw();
+	
 }; 
 
 #endif

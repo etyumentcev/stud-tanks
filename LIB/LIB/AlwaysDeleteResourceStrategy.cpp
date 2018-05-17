@@ -5,7 +5,7 @@ void AlwaysDeleteResourceStrategy::apply(void* resource) throw()
 	delete resource; 
 }
 
-AlwaysDeleteResourceStrategy::~AlwaysDeleteResourceStrategy() throw() 
+AlwaysDeleteResourceStrategy::~AlwaysDeleteResourceStrategy()
 {
 
 } 
