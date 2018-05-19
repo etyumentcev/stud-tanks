@@ -1,0 +1,113 @@
+Installation Instructions
+*************************
+
+Requirements
+============
+
+Wallaroo relies on a couple of Boost libraries *only* if
+- your application is compiled with a *non* C++11 compliant compiler OR
+- XmlConfiguration and JsonConfiguration wallaroo features are used.
+
+If you need Boost libraries, you can donwload the
+latest version from www.boost.org, extract it wherever you want
+and include its path when compiling your application that use Wallaroo.
+Since Wallaroo uses header-only boost libraries, you don't need to compile
+boost.
+
+If you use a C++11 compliant compiler, you only need Boost to exploit
+XmlConfiguration and JsonConfiguration features.
+
+Installation
+============
+
+Wallaroo library is header-only: it consists entirely of header files
+containing templates and inline functions, and require no separately-compiled
+library binaries or special treatment when linking.
+
+Extract the archive wherever you want.
+This is a sketch of the resulting directory structure:
+
+wallaroo\ .......................................The “wallaroo root directory”
+   README ................................Generic documentation about wallaroo
+   INSTALL .........................................Installation documentation
+   ChangeLog ...........................................The log of the changes
+   Version ..............................This file contains the version number
+   wallaroo\ ........................................All Wallaroo Header files
+   samples\ .................................................Examples and test
+      minimal\.................................................A basic example
+      cpp0x_only\.....................This example uses C++0x instead of boost
+      boost_only\.....................This example uses boost instead of C++0x
+      mineplant\ ............A "control system" example using XmlConfiguration
+      roulette\.A roulette simulation, using multiple catalogs and shared libs
+      shapes\.........A drawing sample, using Wal, Xml and Json configurations
+      ...more samples...
+   test\ ............ Automatic tests of the library (for wallaroo developers)
+   doc\ .....................................A subset of Wallaroo library docs
+
+Now you must only remember to insert the wallaroo path when compiling your
+source code.
+If you are using a compiler that doesn't support C++11, or if you plan to
+use the "XmlConfiguration" or "JsonConfiguration" features, you must also
+include the Boost Libraries path.
+
+Usage
+=====
+
+To build your own project, the compiler needs to know the include path of
+the wallaroo and boost (optional) libraries.
+
+So, if you use gcc, you can use the following syntax:
+	g++ -I<boost_path> -I<wallaroo_path> *.cpp -o <app_exe>
+or:
+	g++ -std=c++0x -I<wallaroo_path> *.cpp -o <app_exe>
+(You may need to add the linker -ldl option, if you use share libraries)
+    
+If you use Visual Studio:
+    cl /EHsc /I<wallaroo_path> /I<boost_path> /Fe<app_exe> *.cpp
+(you need the boost path only if you use visual studio 2008 or if you use
+one of XmlConfiguration or JsonConfiguration classes).
+
+To compile anything in Wallaroo, you need a directory containing the wallaroo\
+subdirectory in your #include path.
+
+Since all of Wallaroo's header files have the .h extension, and live in the
+wallaroo\ subdirectory of the wallaroo root, your Wallaroo #include directives
+will look like:
+  #include <wallaroo/whatever.h>
+or
+  #include "wallaroo/whatever.h"
+depending on your preference regarding the use of angle bracket includes.
+Even Windows users can (and, for portability reasons, probably should) use
+forward slashes in #include directives; your compiler doesn't care.
+
+
+Compilation of the samples
+==========================
+
+You can find some examples in the directory samples. Each example comes with:
+* GNU makefile
+* Windows makefile (nmake)
+* Visual Studio Solution File
+
+Where needed (i.e., C++98 compiler or samples using XmlConfiguration/JsonConfiguration
+features) you can specify the boost library path in the following ways:
+
+* GNU Make
+        make CXXFLAGS=-I<boost_path>
+    example:
+        make CXXFLAGS=-I/opt/boost_1_66_0/
+
+* Windows nmake
+    Set the environment variable BOOST.
+    Then, from a visual studio console, use the command:
+        nmake /f makefile.win32
+
+* Visual Studio Solution File
+    Set the environment variable BOOST.
+
+Compilation of the Doxygen documentation
+========================================
+If you have doxygen installed on your system, you can get the html documentation
+of the library in this way:
+    <enter the directory doc>
+    doxygen Doxyfile

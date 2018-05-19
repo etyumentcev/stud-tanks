@@ -1,0 +1,74 @@
+wallaroo
+********
+
+Welcome to wallaroo!
+
+This is the source code for the wallaroo project. The main project page is at:
+http://wallaroolib.sourceforge.net/
+
+All of our documentation is available starting from the home page:
+http://wallaroolib.sourceforge.net/
+
+You can download the packages from sourceforge at:
+http://sourceforge.net/projects/wallaroolib/
+
+Introduction
+============
+
+Wallaroo is a lightweight yet powerful library for configurable creation
+and wiring of C++ classes.
+
+With Wallaroo you will be able to separate the setup phase (object building
+and wiring) from the logic of your classes. In addition, you will be able to
+change the class of your objects without rebuilding anything: in this way you
+can modify the behaviour of your application, or perform mock testing using
+the same executable.
+
+With Wallaroo you will be able to focus on the logic of your classes, without
+worrying about the wiring phase.
+
+This mechanism is called Dependency Injection (DI). Someone calls it
+Inversion of Control (IoC), but actually that has a broader meaning. 
+
+
+Key features
+============
+
+- Lightweight but powerful
+- Header only
+- Multiplatform
+- Type Safe
+- DSL syntax for object creation and wiring
+- Object creation and wiring also by parsing one (or more) xml, json, or wal file
+- Shared library support
+- C++11 or boost interface
+- Doesn't use code generators
+
+
+Installation
+============
+
+See INSTALL for (generic) installation instructions.
+
+
+The Wallaroo Distribution
+=========================
+
+This is a sketch of the resulting directory structure:
+   
+wallaroo\ .......................................The �wallaroo root directory�
+   README ................................Generic documentation about wallaroo
+   INSTALL .........................................Installation documentation
+   ChangeLog ...........................................The log of the changes
+   Version ..............................This file contains the version number
+   wallaroo\ ........................................All Wallaroo Header files
+   samples\ .................................................Examples and test
+      minimal\.................................................A basic example
+      cpp0x_only\.....................This example uses C++0x instead of boost
+      boost_only\.....................This example uses boost instead of C++0x
+      mineplant\ ............A "control system" example using XmlConfiguration
+      roulette\.A roulette simulation, using multiple catalogs and shared libs
+      shapes\.........A drawing sample, using Wal, Xml and Json configurations
+      ...more samples...
+   test\ ............ Automatic tests of the library (for wallaroo developers)
+   doc\ .....................................A subset of Wallaroo library docs
