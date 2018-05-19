@@ -1,16 +1,17 @@
-#ifndef _CONTAINERERROR_H_
-#define _CONTAINERERROR_H_
+#ifndef _CONTAINER_ERROR_H_
+#define _CONTAINER_ERROR_H_
 
 #include <string>
 #include <exception>
 
 
-class ContainerError :public std::exception
+class ContainerError : public std::exception
 {
-	std::string message;
+	std::string message_;
 public:
-	ContainerError(std::string m);
-	std::string GetMessage();
+	explicit ContainerError(std::string m);
+
+	std::string getMessage() const;
 };
 
 #endif

@@ -4,7 +4,8 @@
 class DeleteResourceStrategy 
 { 
 public: 
-	virtual void apply(void* resource) throw() = 0; 
+	virtual void apply(void* resource) throw() = 0;
+	
 	virtual ~DeleteResourceStrategy() throw() {}
 }; 
 

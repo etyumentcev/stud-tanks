@@ -1,32 +1,32 @@
 #include "PointerCounterResourceMonitor.h"
 
 PointerCounterResourceMonitor::PointerCounterResourceMonitor(
-	void *_pointer, DeleteResourceStrategy* _onDelete)
-	: pointer(_pointer), onDelete(_onDelete), counter(0) 
+	void *pointer, DeleteResourceStrategy* onDelete)
+	: pointer_(pointer), counter_(0), onDelete_(onDelete) 
 { 
 
 } 
 
 void PointerCounterResourceMonitor::acquire() throw() 
 { 
-	++counter; 
+	++counter_; 
 } 
 
 void PointerCounterResourceMonitor::release() throw() 
 { 
-	if (--counter <= 0) 
+	if (--counter_ <= 0) 
 	{ 
-		onDelete->apply(pointer); 
+		onDelete_->apply(pointer_); 
 		delete this; 
 	} 
 }
 
 void* PointerCounterResourceMonitor::resource() throw() 
 { 
-	return pointer; 
+	return pointer_; 
 }
 
 PointerCounterResourceMonitor::~PointerCounterResourceMonitor() throw() 
 { 
-	delete onDelete; 
+	delete onDelete_; 
 } 

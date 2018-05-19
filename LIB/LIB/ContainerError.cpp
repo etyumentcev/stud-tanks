@@ -1,13 +1,12 @@
 #include "ContainerError.h"
 
-ContainerError::ContainerError(std::string m)
+ContainerError::ContainerError(const std::string message) : message_(message)
 {
-	message = m;
+	
 }
 
-std::string ContainerError::GetMessage()
+std::string ContainerError::getMessage() const
 {
-	return message;
-
+	return message_;
 }
 

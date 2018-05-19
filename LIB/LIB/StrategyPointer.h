@@ -12,7 +12,7 @@ namespace IoC
 	template<typename T> class PointerHandler : public StrategyHandler
 	{
 	public:
-		virtual Pointer<T> Resolve() = 0;
+		virtual Pointer<T> resolve() = 0;
 		virtual ~PointerHandler()
 		{
 		}
@@ -21,7 +21,7 @@ namespace IoC
 		template<typename T, typename T1> class PointerHandler1 : public StrategyHandler
 	{
 	public:
-		virtual Pointer<T> Resolve(T1) = 0;
+		virtual Pointer<T> resolve(T1) = 0;
 		virtual ~PointerHandler1()
 		{
 		}
@@ -30,7 +30,7 @@ namespace IoC
 	template<typename T> class CreateNewPointer : public PointerHandler<T>
 	{
 	public:
-		virtual Pointer<T> Resolve()
+		Pointer<T> resolve() override
 		{
 			return Pointer<T>(new PointerCounterResourceMonitor(new T(), new AlwaysDeleteResourceStrategy()));
 		}
@@ -42,7 +42,7 @@ namespace IoC
 	template<typename T, typename T1> class CreateNewPointer1 : public PointerHandler1<T, T1>
 	{
 	public:
-		virtual Pointer<T> Resolve(T1 arg)
+		Pointer<T> resolve(T1 arg) override
 		{
 			return Pointer<T>(new PointerCounterResourceMonitor(new T(arg), new AlwaysDeleteResourceStrategy()));
 		}
@@ -51,18 +51,18 @@ namespace IoC
 		}
 	};
 
-	template<typename T> Pointer<T> Resolve(std::string const& key)
+	template<typename T> Pointer<T> resolve(std::string const& key)
 	{
-		PointerHandler<T>* strategy = dynamic_cast<PointerHandler<T>* >(Container::Instance()->Resolve(key));
+		PointerHandler<T>* strategy = dynamic_cast<PointerHandler<T>* >(Container::instance()->resolve(key));
 
-		return strategy->Resolve();
+		return strategy->resolve();
 	}
 
-	template<typename T, typename T1> Pointer<T> Resolve(std::string const& key, T1 arg)
+	template<typename T, typename T1> Pointer<T> resolve(std::string const& key, T1 arg)
 	{
-		PointerHandler1<T, T1>* strategy = dynamic_cast<PointerHandler1<T, T1>* >(Container::Instance()->Resolve(key));
+		PointerHandler1<T, T1>* strategy = dynamic_cast<PointerHandler1<T, T1>* >(Container::instance()->resolve(key));
 
-		return strategy->Resolve(arg);
+		return strategy->resolve(arg);
 	}
 }
 #endif

@@ -1,13 +1,13 @@
 #ifndef _BOOL_H_
 #define _BOOL_H_
 
-#include "Object.h"
+#include "IObject.h"
 
-class Bool : public Object
+class Bool : public IObject
 {
-	bool value;
+	bool value_;
 public:
-	Bool(bool _value);
+	explicit Bool(bool value);
 
 	~Bool();
 };

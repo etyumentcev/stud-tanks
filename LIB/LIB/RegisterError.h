@@ -1,13 +1,13 @@
-#ifndef _REGISTERERROR_H_
-#define _REGISTERERROR_H_
+#ifndef _REGISTER_ERROR_H_
+#define _REGISTER_ERROR_H_
 
 #include "ContainerError.h"
 
 class RegisterError :public ContainerError
 {
-	std::string key;
+	std::string key_;
 public:
-	RegisterError(std::string m, std::string k);
+	RegisterError(std::string message, std::string key);
 };
 
 #endif

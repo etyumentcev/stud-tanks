@@ -8,7 +8,7 @@
 
 class Array : public IObject
 {
-	std::vector<Pointer<IObject>> mArray;
+	std::vector<Pointer<IObject>> array_;
 public:
 	explicit Array(std::vector<Pointer<IObject>> array);
 	

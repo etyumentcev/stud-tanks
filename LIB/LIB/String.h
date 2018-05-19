@@ -1,17 +1,15 @@
 #ifndef _STRING_H_
 #define _STRING_H_
 
-#include "Object.h"
+#include "IObject.h"
 
-#include <memory>
-
-class String : public Object
+class String : public IObject
 {
-	string value;
+	std::string value_;
 public:
-	String(string value);
+	explicit String(std::string value);
 
-	operator string*();
+	explicit operator std::string*();
 
 	virtual ~String();
 };

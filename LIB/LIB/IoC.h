@@ -2,6 +2,7 @@
 #define _IOC_H_
 
 #include <map>
+
 #include "RegisterError.h"
 #include "ResolveError.h"
 
@@ -19,20 +20,20 @@ namespace IoC
 	class Container
 	{
 		~Container() noexcept {}
-		static std::map<std::string, StrategyHandler*> container;
-		static Container* self;
-		static ContainerDestroyer destroyer;
+		static std::map<std::string, StrategyHandler*> container_;
+		static Container* self_;
+		static ContainerDestroyer destroyer_;
 		friend class ContainerDestroyer;
-		void Add(std::string const& key, StrategyHandler* handler);
+		static void add(std::string const& key, StrategyHandler* handler);
 		friend  void Register(std::string const& key, StrategyHandler* strategy) throw(RegisterError);
 	public:
-		StrategyHandler* Resolve(std::string const& key) throw(ResolveError);
-		static Container* Instance();
+		static StrategyHandler* resolve(std::string const& key) throw(ResolveError);
+		static Container* instance();
 	};
 
 	class ContainerDestroyer
 	{
-		Container* master;
+		Container* master_ = nullptr;
 	public:
 		~ContainerDestroyer() noexcept;
 		void initialize(Container* m);

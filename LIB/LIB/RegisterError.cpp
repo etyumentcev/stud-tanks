@@ -1,6 +1,6 @@
 #include "RegisterError.h"
 
-RegisterError::RegisterError(std::string m, std::string k) : ContainerError(m)
+RegisterError::RegisterError(const std::string message, const std::string key) : ContainerError(message)
 {
-	key = k;
+	key_ = key;
 }

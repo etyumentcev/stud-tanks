@@ -7,7 +7,7 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace TypeSystemTests
+namespace type_system_tests
 {		
 	TEST_CLASS(PointerTests)
 	{
@@ -15,11 +15,11 @@ namespace TypeSystemTests
 
 		TEST_METHOD(createPointer)
 		{
-			Pointer<int> pInt(new PointerCounterResourceMonitor(new int, new AlwaysDeleteResourceStrategy())); 
-			Pointer<int> pInt2 = pInt; 
-			*pInt2 = 5; 
+			const Pointer<int> p_int(new PointerCounterResourceMonitor(new int, new AlwaysDeleteResourceStrategy()));
+			auto p_int2 = p_int; 
+			*p_int2 = 5; 
 
-			Assert::AreEqual(5, *pInt2, L"");
+			Assert::AreEqual(5, *p_int2, L"The pointer to int was not created.");
 		}
 
 	};

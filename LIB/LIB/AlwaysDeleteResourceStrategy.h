@@ -7,7 +7,9 @@ class AlwaysDeleteResourceStrategy : public DeleteResourceStrategy
 { 
 public:
 	AlwaysDeleteResourceStrategy();
-	virtual void apply(void* resource) throw(); 
+
+	void apply(void* resource) throw() override;
+
 	virtual ~AlwaysDeleteResourceStrategy() throw();
 }; 
 

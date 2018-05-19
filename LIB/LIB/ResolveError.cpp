@@ -1,6 +1,6 @@
 #include "ResolveError.h"
 
-ResolveError::ResolveError(std::string m, std::string k) : ContainerError(m)
+ResolveError::ResolveError(const std::string message, const std::string key) : ContainerError(message)
 {
-	key = k;
+	key_ = key;
 }

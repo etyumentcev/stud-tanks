@@ -2,37 +2,37 @@
 
 namespace IoC
 {
-	Container* Container::self = 0;
-	ContainerDestroyer Container::destroyer;
-	std::map<std::string, StrategyHandler*> Container::container;
+	Container* Container::self_ = 0;
+	ContainerDestroyer Container::destroyer_;
+	std::map<std::string, StrategyHandler*> Container::container_;
 
-	Container* Container::Instance()
+	Container* Container::instance()
 	{
-		if (!self)
+		if (!self_)
 		{
-			self = new Container;
-			destroyer.initialize(self);
+			self_ = new Container;
+			destroyer_.initialize(self_);
 		}
-		return self;
+		return self_;
 	}
 
 
 	void ContainerDestroyer::initialize(Container* m)
 	{
-		master = m;
+		master_ = m;
 	}
 
 	ContainerDestroyer::~ContainerDestroyer()
 	{
-		delete master;
+		delete master_;
 	}
 
-	void Container::Add(std::string const& key, StrategyHandler* handler)
+	void Container::add(std::string const& key, StrategyHandler* handler)
 	{
-		auto iterator = container.find(key);
-		if (iterator == container.end())
+		const auto iterator = container_.find(key);
+		if (iterator == container_.end())
 		{
-			container.insert(std::pair<std::string, StrategyHandler*>(key, handler));
+			container_.insert(std::pair<std::string, StrategyHandler*>(key, handler));
 		}
 		else
 		{
@@ -40,10 +40,10 @@ namespace IoC
 		}
 	}
 
-	StrategyHandler* Container::Resolve(std::string const& key) throw (ResolveError)
+	StrategyHandler* Container::resolve(std::string const& key) throw (ResolveError)
 	{
-		auto iterator = Container::container.find(key);
-		if (iterator != Container::container.end())
+		const auto iterator = container_.find(key);
+		if (iterator != container_.end())
 		{
 			return iterator->second;
 		}
@@ -57,7 +57,7 @@ namespace IoC
 	{
 		try
 		{
-			Container::Instance()->Add(key, strategy);
+			Container::instance()->add(key, strategy);
 		}
 		catch (RegisterError const& ex)
 		{

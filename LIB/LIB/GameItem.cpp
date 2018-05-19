@@ -1,31 +1,29 @@
 #include "GameItem.h"
 
-using namespace std;
-
-GameItem::GameItem(map<string, unique_ptr<IObject>> _item) : item(move(_item))
+GameItem::GameItem(const std::map<std::string, Pointer<IObject>> item) : item_(item)
 {
 
 }
 
-unique_ptr<IObject> GameItem::getValue(const string& key) throw (out_of_range)
+Pointer<IObject> GameItem::getValue(const std::string& key) throw (std::out_of_range)
 {
 	try
 	{
-		return move(item.at(key));
+		return std::move(item_.at(key));
 	}
-	catch(out_of_range& ex)
+	catch(std::out_of_range& ex)
 	{
 		throw ex;
 	}
 }
 
-void GameItem::setValue(const string& key, unique_ptr<IObject> newValue) throw (out_of_range)
+void GameItem::setValue(const std::string& key, const Pointer<IObject> newValue) throw (std::out_of_range)
 {
 	try
 	{
-		(item.at(key)).reset(newValue.get());
+		item_.at(key) = newValue;
 	}
-	catch (out_of_range& ex)
+	catch (std::out_of_range& ex)
 	{
 		throw ex;
 	}
@@ -33,5 +31,5 @@ void GameItem::setValue(const string& key, unique_ptr<IObject> newValue) throw (
 
 GameItem::~GameItem()
 {
-	item.~map();
+
 }

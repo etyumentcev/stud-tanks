@@ -1,18 +1,18 @@
 #include "Array.h"
 
-Array::Array(std::vector<Pointer<IObject>> array) : mArray(array)
+Array::Array(const std::vector<Pointer<IObject>> array) : array_(array)
 {
 
 }
 
 Pointer<IObject> Array::operator[](const size_t index) const
 {
-	return mArray.at(index);
+	return array_.at(index);
 }
 
 Pointer<IObject> Array::operator[](const size_t index)
 {
-	return mArray.at(index);
+	return array_.at(index);
 }
 
 Array::~Array()
