@@ -2,10 +2,22 @@
 *.d
 
 # Compiled Object files
+*.lastbuildstate
 *.slo
 *.lo
 *.o
 *.obj
+*.suo
+*.db
+*.opendb
+*.db-shm
+*.db-wal
+*.ipch
+*.tlog
+*.log
+*.exp
+*.idb
+*.user
 
 # Precompiled Headers
 *.gch
@@ -15,6 +27,7 @@
 *.so
 *.dylib
 *.dll
+*.pdb
 
 # Fortran module files
 *.mod
