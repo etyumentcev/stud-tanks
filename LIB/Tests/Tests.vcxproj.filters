@@ -19,6 +19,9 @@
     <Filter Include="Файлы исходного кода\Pointer">
       <UniqueIdentifier>{21c5e9c3-ef9b-4691-8d04-1a78167d2157}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы исходного кода\Object">
+      <UniqueIdentifier>{ac2dbdfa-91a6-4428-a1d4-69b42cbe14db}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">

@@ -12,4 +12,4 @@
 
 // TODO: Установите здесь ссылки на дополнительные заголовки, требующиеся для программы
 
-#include "../FakeIt/single_header/mstest/fakeit.hpp"
+#include "../../FakeIt/single_header/mstest/fakeit.hpp"
