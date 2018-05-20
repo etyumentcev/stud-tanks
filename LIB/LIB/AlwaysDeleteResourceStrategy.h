@@ -6,11 +6,11 @@
 class AlwaysDeleteResourceStrategy : public DeleteResourceStrategy 
 { 
 public:
-	AlwaysDeleteResourceStrategy();
+	AlwaysDeleteResourceStrategy() = default;
 
 	void apply(void* resource) throw() override;
 
-	virtual ~AlwaysDeleteResourceStrategy() throw();
+	virtual ~AlwaysDeleteResourceStrategy() throw() {}
 }; 
 
 #endif

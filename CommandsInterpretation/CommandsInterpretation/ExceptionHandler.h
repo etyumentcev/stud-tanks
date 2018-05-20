@@ -1,8 +1,8 @@
-#ifndef _EXCEPTIONHANDLER_H_
-#define _EXCEPTIONHANDLER_H_
+#ifndef _EXCEPTION_HANDLER_H_
+#define _EXCEPTION_HANDLER_H_
 
 #include <functional>
 
-typedef std::function<void() throw()> ExceptionHandler;
+typedef std::function<void()> ExceptionHandler;
 
 #endif

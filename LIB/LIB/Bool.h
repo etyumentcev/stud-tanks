@@ -9,7 +9,7 @@ class Bool : public IObject
 public:
 	explicit Bool(bool value);
 
-	~Bool();
+	virtual ~Bool() noexcept = default;
 };
 
 #endif

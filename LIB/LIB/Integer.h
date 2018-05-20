@@ -14,7 +14,7 @@ public:
 	Integer& operator=(int value);
 	explicit operator int() const;
 
-	virtual ~Integer();
+	virtual ~Integer() noexcept = default;
 };
 
 #endif

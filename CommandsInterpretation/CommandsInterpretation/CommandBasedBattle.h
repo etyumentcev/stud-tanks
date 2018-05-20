@@ -6,11 +6,11 @@
 
 class CommandBasedBattle : public IBattle
 {
-	IBattleCommandInvoker& commandSource;
+	IBattleCommandInvoker& commandSource_;
 public:
-	CommandBasedBattle(IBattleCommandInvoker& _commandSource);
+	explicit CommandBasedBattle(IBattleCommandInvoker& commandSource);
 
-	virtual void process() throw(BattleException);
+	void process() throw(BattleException) override;
 };
 
 #endif

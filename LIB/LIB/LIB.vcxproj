@@ -29,7 +29,7 @@
     <ClInclude Include="IObject.h" />
     <ClInclude Include="IoC.h" />
     <ClInclude Include="NetherDeleteResourceStrategy.h" />
-    <ClInclude Include="ObjectBuffer.h" />
+    <ClInclude Include="GameItemBuffer.h" />
     <ClInclude Include="Pointer.h" />
     <ClInclude Include="PointerCounterResourceMonitor.h" />
     <ClInclude Include="RegisterError.h" />
@@ -47,10 +47,11 @@
     <ClCompile Include="Integer.cpp" />
     <ClCompile Include="IoC.cpp" />
     <ClCompile Include="NetherDeleteResourceStrategy.cpp" />
-    <ClCompile Include="ObjectBuffer.cpp" />
+    <ClCompile Include="GameItemBuffer.cpp" />
     <ClCompile Include="PointerCounterResourceMonitor.cpp" />
     <ClCompile Include="RegisterError.cpp" />
     <ClCompile Include="ResolveError.cpp" />
+    <ClCompile Include="String.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

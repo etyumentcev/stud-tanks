@@ -1,7 +1,7 @@
 #include "CommandBasedBattle.h"
 
-CommandBasedBattle::CommandBasedBattle(IBattleCommandInvoker& _commandSource)
-	: commandSource(_commandSource)
+CommandBasedBattle::CommandBasedBattle(IBattleCommandInvoker& commandSource)
+	: commandSource_(commandSource)
 {
 
 }
@@ -10,7 +10,7 @@ void CommandBasedBattle::process() throw(BattleException)
 {
 	try
 	{
-		BattleCommand& command = commandSource.invoke();
+		auto& command = commandSource_.invoke();
 		try
 		{
 			command();

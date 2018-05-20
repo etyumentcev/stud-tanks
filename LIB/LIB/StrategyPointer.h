@@ -1,5 +1,5 @@
-#ifndef __POINTERSTRATEGY_H_
-#define _POINTERSTRATEGY_H_
+#ifndef _STRATEGY_POINTER_H_
+#define _STRATEGY_POINTER_H_
 
 #include "Pointer.h"
 #include "IoC.h"
@@ -13,18 +13,16 @@ namespace IoC
 	{
 	public:
 		virtual Pointer<T> resolve() = 0;
-		virtual ~PointerHandler()
-		{
-		}
+
+		virtual ~PointerHandler() noexcept = default;
 	};
 
-		template<typename T, typename T1> class PointerHandler1 : public StrategyHandler
+	template<typename T, typename T1> class PointerHandler1 : public StrategyHandler
 	{
 	public:
 		virtual Pointer<T> resolve(T1) = 0;
-		virtual ~PointerHandler1()
-		{
-		}
+
+		virtual ~PointerHandler1() noexcept = default;
 	};
 
 	template<typename T> class CreateNewPointer : public PointerHandler<T>
@@ -34,9 +32,8 @@ namespace IoC
 		{
 			return Pointer<T>(new PointerCounterResourceMonitor(new T(), new AlwaysDeleteResourceStrategy()));
 		}
-		virtual ~CreateNewPointer()
-		{
-		}
+
+		virtual ~CreateNewPointer() noexcept = default;
 	};
 
 	template<typename T, typename T1> class CreateNewPointer1 : public PointerHandler1<T, T1>
@@ -46,23 +43,31 @@ namespace IoC
 		{
 			return Pointer<T>(new PointerCounterResourceMonitor(new T(arg), new AlwaysDeleteResourceStrategy()));
 		}
-		virtual ~CreateNewPointer1()
-		{
-		}
+
+		virtual ~CreateNewPointer1() noexcept = default;
 	};
 
-	template<typename T> Pointer<T> resolve(std::string const& key)
+	template<typename T> Pointer<T> resolve(std::string const& key) throw (ResolveError)
 	{
 		PointerHandler<T>* strategy = dynamic_cast<PointerHandler<T>* >(Container::instance()->resolve(key));
 
-		return strategy->resolve();
+		if (strategy != nullptr)
+		{
+			return strategy->resolve();
+		}
+		throw ResolveError("Strategy is null pointer.");
 	}
 
 	template<typename T, typename T1> Pointer<T> resolve(std::string const& key, T1 arg)
 	{
 		PointerHandler1<T, T1>* strategy = dynamic_cast<PointerHandler1<T, T1>* >(Container::instance()->resolve(key));
 
-		return strategy->resolve(arg);
+		if (strategy != nullptr)
+		{
+			return strategy->resolve(arg);
+		}
+		throw ResolveError("Strategy is null pointer.");
 	}
 }
+
 #endif

@@ -2,7 +2,7 @@
 
 namespace IoC
 {
-	Container* Container::self_ = 0;
+	Container* Container::self_ = nullptr;
 	ContainerDestroyer Container::destroyer_;
 	std::map<std::string, StrategyHandler*> Container::container_;
 
@@ -17,9 +17,9 @@ namespace IoC
 	}
 
 
-	void ContainerDestroyer::initialize(Container* m)
+	void ContainerDestroyer::initialize(Container* master)
 	{
-		master_ = m;
+		master_ = master;
 	}
 
 	ContainerDestroyer::~ContainerDestroyer()
@@ -47,10 +47,7 @@ namespace IoC
 		{
 			return iterator->second;
 		}
-		else
-		{
-			throw ResolveError("Wrong Key.", key);
-		}
+		throw ResolveError("Wrong Key.", key);
 	}
 
 	void Register(std::string const& key, StrategyHandler* strategy) throw(RegisterError)
@@ -59,9 +56,9 @@ namespace IoC
 		{
 			Container::instance()->add(key, strategy);
 		}
-		catch (RegisterError const& ex)
+		catch (RegisterError const&)
 		{
-			throw ex;
+			throw;
 		}
 	}
 }

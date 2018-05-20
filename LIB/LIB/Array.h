@@ -10,12 +10,13 @@ class Array : public IObject
 {
 	std::vector<Pointer<IObject>> array_;
 public:
+	Array() = default;
 	explicit Array(std::vector<Pointer<IObject>> array);
 	
 	Pointer<IObject> operator[](size_t index) const;
 	Pointer<IObject> operator[](size_t index);
 
-	virtual ~Array();
+	virtual ~Array() noexcept = default;
 };
 
 #endif

@@ -8,7 +8,7 @@ class IObject
 public:
 	virtual std::string getKey() const = 0;
 
-	virtual ~IObject() {}
+	virtual ~IObject() noexcept = default;
 };
 
 #endif

@@ -6,15 +6,15 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace CommandsInterpretationTests
+namespace commands_interpretation_tests
 {
 	TEST_CLASS(HandledExceptionTests)
 	{
 	public:
 
-		TEST_METHOD(HandledExceptionShouldCallExceptionHandler)
+		TEST_METHOD(handledExceptionShouldCallExceptionHandler)
 		{
-			bool wasCalled = false;
+			auto wasCalled = false;
 			HandledException ex;
 
 			ex.handle([&wasCalled]() { wasCalled = true; });

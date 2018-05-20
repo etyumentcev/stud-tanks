@@ -75,9 +75,6 @@
     <ClInclude Include="String.h">
       <Filter>Файлы заголовков\Object</Filter>
     </ClInclude>
-    <ClInclude Include="ObjectBuffer.h">
-      <Filter>Файлы заголовков\Pointer</Filter>
-    </ClInclude>
     <ClInclude Include="GameItem.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
@@ -89,6 +86,9 @@
     </ClInclude>
     <ClInclude Include="StrategyPointer.h">
       <Filter>Файлы заголовков\IoC</Filter>
+    </ClInclude>
+    <ClInclude Include="GameItemBuffer.h">
+      <Filter>Файлы заголовков\Pointer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -110,9 +110,6 @@
     <ClCompile Include="Array.cpp">
       <Filter>Файлы ресурсов\Object</Filter>
     </ClCompile>
-    <ClCompile Include="ObjectBuffer.cpp">
-      <Filter>Файлы ресурсов\Pointer</Filter>
-    </ClCompile>
     <ClCompile Include="GameItem.cpp">
       <Filter>Файлы ресурсов</Filter>
     </ClCompile>
@@ -123,6 +120,12 @@
       <Filter>Файлы ресурсов\IoC</Filter>
     </ClCompile>
     <ClCompile Include="Integer.cpp">
+      <Filter>Файлы ресурсов\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="GameItemBuffer.cpp">
+      <Filter>Файлы ресурсов\Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="String.cpp">
       <Filter>Файлы ресурсов\Object</Filter>
     </ClCompile>
   </ItemGroup>

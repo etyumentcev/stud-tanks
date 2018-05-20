@@ -10,8 +10,8 @@ class PointerCounterResourceMonitor: public ResourceMonitor
 	int counter_; 
 	DeleteResourceStrategy* onDelete_; 
 public: 
-	PointerCounterResourceMonitor(void *pointer, DeleteResourceStrategy* onDelete);
-	PointerCounterResourceMonitor();
+	PointerCounterResourceMonitor(void* pointer, DeleteResourceStrategy* onDelete);
+	PointerCounterResourceMonitor() = default;
 
 	void acquire() throw() override;
 	void release() throw() override;

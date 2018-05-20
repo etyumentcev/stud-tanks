@@ -20,8 +20,3 @@ Integer::operator int() const
 {
 	return this->value_;
 }
-
-Integer::~Integer()
-{
-	
-}

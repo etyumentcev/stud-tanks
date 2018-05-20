@@ -12,20 +12,24 @@ namespace IoC
 	class StrategyHandler
 	{
 	public:
-		virtual ~StrategyHandler() noexcept {}
+		virtual ~StrategyHandler() noexcept = default;
 	};
 
 	class ContainerDestroyer;
 
 	class Container
 	{
-		~Container() noexcept {}
 		static std::map<std::string, StrategyHandler*> container_;
 		static Container* self_;
 		static ContainerDestroyer destroyer_;
-		friend class ContainerDestroyer;
+
 		static void add(std::string const& key, StrategyHandler* handler);
-		friend  void Register(std::string const& key, StrategyHandler* strategy) throw(RegisterError);
+
+		friend class ContainerDestroyer;
+
+		friend void Register(std::string const& key, StrategyHandler* strategy) throw(RegisterError);
+
+		virtual ~Container() noexcept = default;
 	public:
 		static StrategyHandler* resolve(std::string const& key) throw(ResolveError);
 		static Container* instance();
@@ -35,12 +39,12 @@ namespace IoC
 	{
 		Container* master_ = nullptr;
 	public:
-		~ContainerDestroyer() noexcept;
-		void initialize(Container* m);
+		void initialize(Container* master);
+
+		virtual ~ContainerDestroyer() noexcept;
 	};
 
 	void Register(std::string const& key, StrategyHandler* strategy) throw(RegisterError);
-	
 }
 
 #endif

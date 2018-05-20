@@ -1,7 +1,7 @@
 #include "PointerCounterResourceMonitor.h"
 
 PointerCounterResourceMonitor::PointerCounterResourceMonitor(
-	void *pointer, DeleteResourceStrategy* onDelete)
+	void* pointer, DeleteResourceStrategy* onDelete)
 	: pointer_(pointer), counter_(0), onDelete_(onDelete) 
 { 
 

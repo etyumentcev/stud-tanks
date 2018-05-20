@@ -18,19 +18,19 @@ namespace lib_tests
 		TEST_METHOD(createAPointerToIntUsingIoC)
 		{
 			Register("int", new CreateNewPointer<int>());
-			const auto p_int1 = resolve<int>("int");
-			auto p_int2 = p_int1;
-			*p_int2 = 5;
-			Assert::AreEqual(5, *p_int2, L"The pointer to int was not created.");
+			const auto pInt1 = resolve<int>("int");
+			auto pInt2 = pInt1;
+			*pInt2 = 5;
+			Assert::AreEqual(5, *pInt2, L"The pointer to int was not created.");
 		}
 
 		TEST_METHOD(createAPointerToIntegerUsingIoC)
 		{
 			Register("Integer", new CreateNewPointer1<Integer, int>());
-			const auto p_integer1 = resolve<Integer>("Integer", 5);
-			auto p_integer2 = p_integer1;
-			*p_integer2 = 5;
-			const auto integer2 = static_cast<int>(*p_integer2);
+			const auto pInteger1 = resolve<Integer>("Integer", 5);
+			auto pInteger2 = pInteger1;
+			*pInteger2 = 5;
+			const auto integer2 = static_cast<int>(*pInteger2);
 			Assert::AreEqual<int>(5, integer2, L"The pointer to Integer was not created.");
 		}
 	};

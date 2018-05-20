@@ -8,6 +8,8 @@ class IBattleCommandInvoker
 {
 public:
 	virtual BattleCommand& invoke() throw(BattleCommandInvokerException) = 0;
+
+	virtual ~IBattleCommandInvoker() noexcept = default;
 };
 
 #endif

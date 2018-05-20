@@ -9,15 +9,15 @@
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace sandboxTests
+namespace sandbox_tests
 {
 	TEST_CLASS(CommandBasedBattleTests)
 	{
 	public:
 
-		TEST_METHOD(CommandBasedBattleShouldCallTheCommand)
+		TEST_METHOD(commandBasedBattleShouldCallTheCommand)
 		{
-			bool wasCalled = false;
+			auto wasCalled = false;
 			BattleCommand command = [&wasCalled]() {wasCalled = true; };
 
 			fakeit::Mock<IBattleCommandInvoker> mock;
@@ -31,7 +31,7 @@ namespace sandboxTests
 			Assert::IsTrue(wasCalled);
 		}
 
-		TEST_METHOD(CommandBasedBattleShouldThrowBattleExceptionIfBattleCommandInvokerThrowsException)
+		TEST_METHOD(commandBasedBattleShouldThrowBattleExceptionIfBattleCommandInvokerThrowsException)
 		{
 			fakeit::Mock<IBattleCommandInvoker> mock;
 			fakeit::When(Method(mock, invoke)).Throw(BattleCommandInvokerException());
@@ -43,9 +43,9 @@ namespace sandboxTests
 			fakeit::Verify(Method(mock, invoke)).Once();
 		}
 
-		TEST_METHOD(CommandBasedBattleShouldThrowBattleExceptionIfBattleCommandThrowsException)
+		TEST_METHOD(commandBasedBattleShouldThrowBattleExceptionIfBattleCommandThrowsException)
 		{
-			bool wasCalled = false;
+			auto wasCalled = false;
 			BattleCommand command = [&wasCalled]()
 			{
 				wasCalled = true;

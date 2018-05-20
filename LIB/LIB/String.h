@@ -11,7 +11,7 @@ public:
 
 	explicit operator std::string*();
 
-	virtual ~String();
+	virtual ~String() noexcept = default;
 };
 
 #endif

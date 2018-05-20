@@ -1,5 +1,5 @@
-#ifndef _BATTLECOMMAND_H_
-#define _BATTLECOMMAND_H_
+#ifndef _BATTLE_COMMAND_H_
+#define _BATTLE_COMMAND_H_
 
 #include <functional>
 

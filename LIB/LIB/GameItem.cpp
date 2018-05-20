@@ -1,6 +1,6 @@
 #include "GameItem.h"
 
-GameItem::GameItem(const std::map<std::string, Pointer<IObject>> item) : item_(item)
+GameItem::GameItem(const std::map<std::string, Pointer<IObject> > item) : item_(item)
 {
 
 }
@@ -11,9 +11,9 @@ Pointer<IObject> GameItem::getValue(const std::string& key) throw (std::out_of_r
 	{
 		return std::move(item_.at(key));
 	}
-	catch(std::out_of_range& ex)
+	catch(std::out_of_range&)
 	{
-		throw ex;
+		throw;
 	}
 }
 
@@ -23,9 +23,9 @@ void GameItem::setValue(const std::string& key, const Pointer<IObject> newValue)
 	{
 		item_.at(key) = newValue;
 	}
-	catch (std::out_of_range& ex)
+	catch (std::out_of_range&)
 	{
-		throw ex;
+		throw;
 	}
 }
 

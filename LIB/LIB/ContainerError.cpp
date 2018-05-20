@@ -9,4 +9,3 @@ std::string ContainerError::getMessage() const
 {
 	return message_;
 }
-

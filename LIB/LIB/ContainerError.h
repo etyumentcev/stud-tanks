@@ -4,12 +4,11 @@
 #include <string>
 #include <exception>
 
-
 class ContainerError : public std::exception
 {
 	std::string message_;
 public:
-	explicit ContainerError(std::string m);
+	explicit ContainerError(std::string message);
 
 	std::string getMessage() const;
 };

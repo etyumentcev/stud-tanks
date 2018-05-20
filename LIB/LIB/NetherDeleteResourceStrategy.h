@@ -10,7 +10,7 @@ public:
 
 	void apply(void*) throw() override;
 
-	virtual ~NetherDeleteResourceStrategy() throw();
+	virtual ~NetherDeleteResourceStrategy() throw() {}
 }; 
 
 #endif

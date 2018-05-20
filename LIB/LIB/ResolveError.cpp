@@ -4,3 +4,8 @@ ResolveError::ResolveError(const std::string message, const std::string key) : C
 {
 	key_ = key;
 }
+
+ResolveError::ResolveError(const std::string message) : ContainerError(message)
+{
+	
+}

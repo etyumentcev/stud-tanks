@@ -7,6 +7,8 @@ class IBattle
 {
 public:
 	virtual void process() throw(BattleException) = 0;
+
+	virtual ~IBattle() noexcept = default;
 };
 
 #endif

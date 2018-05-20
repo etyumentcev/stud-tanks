@@ -3,10 +3,11 @@
 
 #include "ContainerError.h"
 
-class ResolveError :public ContainerError
+class ResolveError : public ContainerError
 {
 	std::string key_;
 public:
+	explicit ResolveError(std::string message);
 	ResolveError(std::string message, std::string key);
 };
 
