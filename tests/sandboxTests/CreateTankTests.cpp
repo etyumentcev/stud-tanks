@@ -1,16 +1,16 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 
-#include "../../LIB/LIB/StrategyPointer.h"
-#include "../../LIB/LIB/GameItemBuffer.h"
-#include "../../CommandsInterpretation/CommandsInterpretation/CreateTank.h"
-#include "../LIB/Array.h"
-#include "../LIB/Integer.h"
-#include "../LIB/String.h"
+#include "../../libraries/data/StrategyPointer.h"
+#include "../../libraries/data/GameItemBuffer.h"
+#include "../../libraries/commands/CreateTank.h"
+#include "../../libraries/data/Array.h"
+#include "../../libraries/data/Integer.h"
+#include "../../libraries/data/String.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace game_tests
+namespace sandbox_tests
 {		
 	TEST_CLASS(ÑreateTankTests)
 	{

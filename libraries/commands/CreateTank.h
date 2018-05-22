@@ -2,7 +2,7 @@
 #define _CREATE_TANK_
 
 #include "IBattleCommandInvoker.h"
-#include "../../LIB/LIB/GameItemBuffer.h"
+#include "../data/GameItemBuffer.h"
 
 class CreateTank : public IBattleCommandInvoker
 {

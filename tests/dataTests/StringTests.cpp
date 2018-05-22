@@ -1,11 +1,11 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 
-#include "../Lib/String.h"
+#include "../../libraries/data/String.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace lib_tests
+namespace data_tests
 {		
 	TEST_CLASS(StringTests)
 	{

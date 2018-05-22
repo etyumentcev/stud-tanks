@@ -2,11 +2,11 @@
 
 #include "CppUnitTest.h"
 
-#include "../CommandsInterpretation/HandledException.h"
+#include "../../libraries/commands/HandledException.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace commands_interpretation_tests
+namespace commands_tests
 {
 	TEST_CLASS(HandledExceptionTests)
 	{

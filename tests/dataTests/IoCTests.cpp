@@ -1,24 +1,22 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 
-#include "../Lib/IoC.h"
-#include "../Lib/Pointer.h"
-#include "../Lib/StrategyPointer.h"
-#include "../Lib/Integer.h"
+#include "../../libraries/data/IoC.h"
+#include "../../libraries/data/Pointer.h"
+#include "../../libraries/data/StrategyPointer.h"
+#include "../../libraries/data/Integer.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-using namespace IoC;
-
-namespace lib_tests
+namespace data_tests
 {		
 	TEST_CLASS(IoCTests)
 	{
 	public:		
 		TEST_METHOD(createAPointerToIntUsingIoC)
 		{
-			Register("int", new CreateNewPointer<int>());
-			const auto pInt1 = resolve<int>("int");
+			Register("int", new IoC::CreateNewPointer<int>());
+			const auto pInt1 = IoC::resolve<int>("int");
 			auto pInt2 = pInt1;
 			*pInt2 = 5;
 			Assert::AreEqual(5, *pInt2, L"The pointer to int was not created.");

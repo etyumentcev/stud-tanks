@@ -4,12 +4,12 @@
 
 #include "CppUnitTest.h"
 
-#include "../CommandsInterpretation/CommandBasedBattle.h"
-#include "../CommandsInterpretation/IBattleCommandInvoker.h"
+#include "../../libraries/commands/CommandBasedBattle.h"
+#include "../../libraries/commands/IBattleCommandInvoker.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace sandbox_tests
+namespace commands_tests
 {
 	TEST_CLASS(CommandBasedBattleTests)
 	{

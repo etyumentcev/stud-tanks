@@ -1,7 +1,4 @@
-# Prerequisites
 *.d
-
-# Compiled Object files
 *.lastbuildstate
 *.slo
 *.lo
@@ -18,28 +15,18 @@
 *.exp
 *.idb
 *.user
-
-# Precompiled Headers
 *.gch
 *.pch
-
-# Compiled Dynamic libraries
 *.so
 *.dylib
 *.dll
 *.pdb
-
-# Fortran module files
 *.mod
 *.smod
-
-# Compiled Static libraries
 *.lai
 *.la
 *.a
 *.lib
-
-# Executables
 *.exe
 *.out
 *.app

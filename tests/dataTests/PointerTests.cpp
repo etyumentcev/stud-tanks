@@ -1,13 +1,13 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 
-#include "../Lib/Pointer.h"
-#include "../Lib/PointerCounterResourceMonitor.h"
-#include "../Lib/AlwaysDeleteResourceStrategy.h"
+#include "../../libraries/data/Pointer.h"
+#include "../../libraries/data/PointerCounterResourceMonitor.h"
+#include "../../libraries/data/AlwaysDeleteResourceStrategy.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace type_system_tests
+namespace data_tests
 {		
 	TEST_CLASS(PointerTests)
 	{

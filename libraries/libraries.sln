@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LIB", "LIB\LIB.vcxproj", "{3B2E0799-DD66-49CA-9A25-46A7410937DB}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "data", "data\data.vcxproj", "{3B2E0799-DD66-49CA-9A25-46A7410937DB}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tests", "Tests\Tests.vcxproj", "{F86A9CFF-20B0-4AA9-9863-ADE593BD5CB9}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dataTests", "..\tests\dataTests\dataTests.vcxproj", "{F86A9CFF-20B0-4AA9-9863-ADE593BD5CB9}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommandsInterpretation", "..\CommandsInterpretation\CommandsInterpretation\CommandsInterpretation.vcxproj", "{0F8AA76D-C99C-449B-B06C-1327C17C2F20}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "commands", "commands\commands.vcxproj", "{0F8AA76D-C99C-449B-B06C-1327C17C2F20}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommandsInterpretationTests", "..\CommandsInterpretation\CommandsInterpretationTests\CommandsInterpretationTests.vcxproj", "{D6D8F814-1F5D-48A1-8E6C-1991E1236F4F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "commandsTests", "..\tests\commandsTests\commandsTests.vcxproj", "{D6D8F814-1F5D-48A1-8E6C-1991E1236F4F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameTests", "GameTests\GameTests.vcxproj", "{316B5135-5D5F-46EA-8F31-659638F449E3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sandboxTests", "..\tests\sandboxTests\sandboxTests.vcxproj", "{316B5135-5D5F-46EA-8F31-659638F449E3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

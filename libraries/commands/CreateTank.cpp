@@ -1,5 +1,5 @@
 #include "CreateTank.h"
-#include "../../LIB/LIB/StrategyPointer.h"
+#include "../data/StrategyPointer.h"
 
 CreateTank::CreateTank(IObject& argsArray) : argsArray_(argsArray)
 {
