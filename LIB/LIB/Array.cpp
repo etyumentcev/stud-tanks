@@ -14,3 +14,8 @@ Pointer<IObject> Array::operator[](const size_t index)
 {
 	return array_.at(index);
 }
+
+std::string Array::getKey() const
+{
+	return "Array";
+}

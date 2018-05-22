@@ -9,7 +9,9 @@ class String : public IObject
 public:
 	explicit String(std::string value);
 
-	explicit operator std::string*();
+	explicit operator std::string() const;
+
+	std::string getKey() const override;
 
 	virtual ~String() noexcept = default;
 };

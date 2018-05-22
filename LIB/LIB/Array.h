@@ -16,6 +16,8 @@ public:
 	Pointer<IObject> operator[](size_t index) const;
 	Pointer<IObject> operator[](size_t index);
 
+	std::string getKey() const override;
+
 	virtual ~Array() noexcept = default;
 };
 

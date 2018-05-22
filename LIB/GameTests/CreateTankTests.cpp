@@ -42,11 +42,10 @@ namespace game_tests
 			auto pInteger6 = IoC::resolve<Integer>("Integer", 15);
 			auto pInteger7 = IoC::resolve<Integer>("Integer", 15);
 
-			//std::vector<Pointer<IObject&> > arr;
-			//arr.push_back(static_cast<Pointer<IObject> >(pStr));
+			auto pArr = IoC::resolve<Array>("Array");
 
-			//auto pArray = IoC::resolve<Array>("Array");
-
+			std::vector<Pointer<IObject> > v;
+			
 
 			//auto pCommand = IoC::resolve<CreateTank>("CreateTank", );
 		}

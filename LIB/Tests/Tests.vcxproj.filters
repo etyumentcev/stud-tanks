@@ -35,11 +35,17 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="IoCTest.cpp">
-      <Filter>Файлы исходного кода\IoC</Filter>
-    </ClCompile>
     <ClCompile Include="PointerTests.cpp">
       <Filter>Файлы исходного кода\Pointer</Filter>
+    </ClCompile>
+    <ClCompile Include="StringTests.cpp">
+      <Filter>Файлы исходного кода\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="IntegerTests.cpp">
+      <Filter>Файлы исходного кода\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="IoCTests.cpp">
+      <Filter>Файлы исходного кода\IoC</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
