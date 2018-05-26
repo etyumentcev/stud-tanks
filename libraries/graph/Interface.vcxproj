@@ -20,10 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{A82A71F8-D039-4DE8-813D-553A3BE7ED06}</ProjectGuid>
-    <RootNamespace>simpleGraph</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
-    <ProjectName>Interface</ProjectName>
+    <ProjectGuid>{A7A40215-4D64-426A-A34F-F56AE026FBA5}</ProjectGuid>
+    <RootNamespace>Interface</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -112,21 +111,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DrawFirstCommandTank.cpp" />
-    <ClCompile Include="DrawSecondCommandTank.cpp" />
-    <ClCompile Include="FieldSetting.cpp" />
-    <ClCompile Include="GameFieldWithObj.cpp" />
-    <ClCompile Include="MyExceptions.cpp" />
-    <ClCompile Include="SpritePainter.cpp" />
-    <ClCompile Include="SpriteLoader.cpp" />
+    <ClInclude Include="SpritesLoader.h" />
+    <ClInclude Include="SpritesPainter.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DrawFirstCommandTank.h" />
-    <ClInclude Include="DrawSecondCommandTank.h" />
-    <ClInclude Include="Figure.h" />
-    <ClInclude Include="MyExceptions.h" />
-    <ClInclude Include="SpritePainter.h" />
-    <ClInclude Include="SpriteLoader.h" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="SpritesLoader.cpp" />
+    <ClCompile Include="SpritesPainter.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
