@@ -2,13 +2,14 @@
 #define _CREATE_TANK_
 
 #include "IBattleCommandInvoker.h"
-#include "../data/GameItemBuffer.h"
+#include "../data/ObjectBuffer.h"
+#include "../data/Pointer.h"
 
 class CreateTank : public IBattleCommandInvoker
 {
-	IObject& argsArray_;
+	Pointer<IObject> argsArray_;
 public:
-	explicit CreateTank(IObject& argsArray);
+	explicit CreateTank(Pointer<IObject> argsArray);
 
 	BattleCommand& invoke() throw(BattleCommandInvokerException) override;
 };

@@ -24,12 +24,11 @@
     <ClInclude Include="Bool.h" />
     <ClInclude Include="ContainerError.h" />
     <ClInclude Include="DeleteResourceStrategy.h" />
-    <ClInclude Include="GameItem.h" />
     <ClInclude Include="Integer.h" />
     <ClInclude Include="IObject.h" />
     <ClInclude Include="IoC.h" />
     <ClInclude Include="NetherDeleteResourceStrategy.h" />
-    <ClInclude Include="GameItemBuffer.h" />
+    <ClInclude Include="ObjectBuffer.h" />
     <ClInclude Include="Pointer.h" />
     <ClInclude Include="PointerCounterResourceMonitor.h" />
     <ClInclude Include="RegisterError.h" />
@@ -43,11 +42,10 @@
     <ClCompile Include="AlwaysDeleteResourceStrategy.cpp" />
     <ClCompile Include="Array.cpp" />
     <ClCompile Include="ContainerError.cpp" />
-    <ClCompile Include="GameItem.cpp" />
     <ClCompile Include="Integer.cpp" />
     <ClCompile Include="IoC.cpp" />
     <ClCompile Include="NetherDeleteResourceStrategy.cpp" />
-    <ClCompile Include="GameItemBuffer.cpp" />
+    <ClCompile Include="ObjectBuffer.cpp" />
     <ClCompile Include="PointerCounterResourceMonitor.cpp" />
     <ClCompile Include="RegisterError.cpp" />
     <ClCompile Include="ResolveError.cpp" />

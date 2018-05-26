@@ -68,6 +68,7 @@ namespace IoC
 		}
 		throw ResolveError("Strategy is null pointer.");
 	}
+
 }
 
 #endif

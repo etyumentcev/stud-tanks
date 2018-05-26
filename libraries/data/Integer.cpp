@@ -20,3 +20,13 @@ Integer::operator int() const
 {
 	return this->value_;
 }
+
+Pointer<IObject> Integer::getValue(const std::string key)
+{
+	return args_[key];
+}
+	
+void Integer::setValue(const std::string key, const Pointer<IObject> value)
+{
+	args_[key] = value;
+}

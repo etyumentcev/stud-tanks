@@ -19,9 +19,8 @@ namespace IoC
 
 	class Container
 	{
-		static std::map<std::string, StrategyHandler*> container_;
+		std::map<std::string, StrategyHandler*> container_;
 		static Container* self_;
-		static ContainerDestroyer destroyer_;
 
 		static void add(std::string const& key, StrategyHandler* handler);
 
@@ -39,8 +38,7 @@ namespace IoC
 	{
 		Container* master_ = nullptr;
 	public:
-		void initialize(Container* master);
-
+		void initialize();
 		virtual ~ContainerDestroyer() noexcept;
 	};
 

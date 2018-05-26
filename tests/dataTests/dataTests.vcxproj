@@ -161,6 +161,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ArrayTests.cpp" />
     <ClCompile Include="IntegerTests.cpp" />
     <ClCompile Include="IoCTests.cpp" />
     <ClCompile Include="PointerTests.cpp" />

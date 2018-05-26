@@ -22,7 +22,21 @@ public:
 	: pointerMonitor_(other.pointerMonitor_) 
 		{ 
 			pointerMonitor_->acquire(); 
+		}
+
+	template<typename Y>
+	Pointer(Pointer<Y> const& other) 
+	{ 
+		Y* o = reinterpret_cast<Y*>(reinterpret_cast<Pointer<T> const&>(other).pointerMonitor_->resource()); 
+
+		T* to = dynamic_cast<T*>(o); 
+		if(!to) 
+		{ 
+			throw 1; 
 		} 
+		pointerMonitor_ = reinterpret_cast<Pointer<T> const&>(other).pointerMonitor_; 
+		pointerMonitor_->acquire(); 
+	}	
 
 	Pointer<T>& operator=(Pointer<T> const& other) 
 		{ 
@@ -46,6 +60,7 @@ public:
 		{ 
 			pointerMonitor_->release(); 
 		}
+
 }; 
 
 #endif

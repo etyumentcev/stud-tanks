@@ -47,5 +47,8 @@
     <ClCompile Include="IoCTests.cpp">
       <Filter>Файлы исходного кода\IoC</Filter>
     </ClCompile>
+    <ClCompile Include="ArrayTests.cpp">
+      <Filter>Файлы исходного кода\Object</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -42,7 +42,7 @@
     <ClInclude Include="IBattle.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="CreateTank.h">
+    <ClInclude Include="BattleCommandCreateTank.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
@@ -53,7 +53,7 @@
     <ClCompile Include="CommandBasedBattle.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="CreateTank.cpp">
+    <ClCompile Include="BattleCommandCreateTank.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

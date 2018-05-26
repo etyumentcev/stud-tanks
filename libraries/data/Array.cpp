@@ -19,3 +19,13 @@ std::string Array::getKey() const
 {
 	return "Array";
 }
+
+Pointer<IObject> Array::getValue(const std::string key)
+{
+	return args_[key];
+}
+	
+void Array::setValue(const std::string key, const Pointer<IObject> value)
+{
+	args_[key] = value;
+}

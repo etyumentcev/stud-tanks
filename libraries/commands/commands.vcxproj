@@ -127,7 +127,7 @@
     <ClInclude Include="BattleCommandInvokerException.h" />
     <ClInclude Include="BattleException.h" />
     <ClInclude Include="CommandBasedBattle.h" />
-    <ClInclude Include="CreateTank.h" />
+    <ClInclude Include="BattleCommandCreateTank.h" />
     <ClInclude Include="ExceptionHandler.h" />
     <ClInclude Include="HandledException.h" />
     <ClInclude Include="IBattle.h" />
@@ -135,7 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CommandBasedBattle.cpp" />
-    <ClCompile Include="CreateTank.cpp" />
+    <ClCompile Include="BattleCommandCreateTank.cpp" />
     <ClCompile Include="HandledException.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
